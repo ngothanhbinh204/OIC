@@ -1,0 +1,33 @@
+section.overview-1(class="section-py !pb-0")
+	.container-fluid 
+		h2.title(class="text-right heading-96 font-bold mb-12") Katina Mission 
+		.wrap-content(class="rem:max-w-[1053px] w-full mx-auto xl:rem:mb-[84px] mb-base")
+			.format-content(class="heading-3 font-normal")
+				p To empower Vietnamese corporations and family‑owned businesses to navigate critical transitions—transforming complexity into competitive advantage through disciplined strategy, deep governance, and relentless execution.
+		.wrapper-main(class="grid lg:grid-cols-[calc(492/1600*100%)_1fr] grid-cols-1 gap-5")
+			.col-left(class="flex flex-col gap-4")
+				-for(var i=0;i<2;i++)
+					.img
+						a(href="#" class="img-ratio ratio:pt-[310_492] zoom-img") 
+							+PugImg()
+			.col-right
+				.img 
+					a(href="#" class="img-ratio ratio:pt-[640_1088] zoom-img") 
+						+PugImg()
+section.overview-2(class="xl:pt-24 xl:rem:pb-[104px] py-10" tab-wrapper="parent" tab-mode="mouseenter")
+	.container-fluid 
+		h2.title(class="text-right heading-96 font-bold mb-12") Values 
+		.lists(class="flex flex-col gap-base")
+			-for(var i=0;i<4;i++)
+				.item.media-item-wrapper(tab-item="parent" tab-item-value=`${i+1}` class="grid lg:grid-cols-[calc(718/1600*100%)_1fr] grid-cols-1 items-center cursor-pointer")
+					.wrap-content(class="grid items-center grid-cols-[calc(80/718*100%)_1fr] gap-6")
+						.number(class="heading-banner font-bold uppercase text-Primary-1-Subtitle") 01
+						.caption
+							h3.title(class="heading-3 font-semibold text-Primary-4-Subtitle") Partner Led Immersion
+							.toggle-hidden
+								div
+									.format-content(class="body-1 font-light mt-5") 
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ...
+					.wrap-image(class="xl:rem:pl-[230px]") 
+						a(href="#" class="img-ratio ratio:pt-[118_650]")  
+							+PugImg()

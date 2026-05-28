@@ -1,0 +1,48 @@
+.contact
+	@apply relative z-10
+	.contact-main
+		@apply xl:mb-16 mb-base
+	.contact-item
+		@apply flex gap-4
+		i
+			@apply text-Primary-1
+		.contact-wrap
+			a
+				+hover-underline(95%, #241e8a)
+				@screen -md
+					@apply text-[16px]
+	.map
+		iframe
+			@apply w-full rem:h-[336px]
+	.col-left
+		.contact-item
+			.bottom
+				a
+					@apply hover:text-Primary-1
+	.col-left
+		@apply rounded-5
+		.title
+			span
+				@apply text-Primary-1
+		form
+			.wrap-form
+				@screen -md
+					@apply grid-cols-1
+			.form-submit 
+				button
+					i
+						@apply hidden
+			.form-group
+				input, textarea
+					@apply border border-Utility-gray-100 font-normal h-10
+					@apply inline-flex items-center justify-center w-full px-4
+					&::placeholder
+						@apply text-[#818181]
+				&.textarea
+					textarea
+						@apply rem:max-h-[120px] h-full py-4 resize-none			
+	.map-wrap
+		.map
+			@apply rem:h-[450px]
+			iframe
+				@apply w-full h-full

@@ -1,0 +1,159 @@
+.recruit-banner
+	@apply px-4
+.recruit-page
+	.modulepager
+		@apply hidden
+.recruit-1
+	.row
+		@apply m-0 p-0
+		@screen -lg
+			@apply flex-col
+		.col
+			@apply m-0 p-0
+	.fullcontent
+		h4,h5,h6
+			@apply text-Primary-1
+	.container-fluid
+		@apply p-0
+		&:nth-child(odd)
+			@apply bg-white
+			.row
+				@apply flex-row-reverse
+				@screen -lg
+					@apply flex-col
+			.txt
+				@screen lg
+					@apply ml-auto pl-0 pr-10
+				@screen xl
+					@apply pr-20
+				@screen -lg
+					@apply py-6
+	.scrollbar-wrap
+		// max-height: r(270px)
+		@apply pr-1 body-1 overflow-y-auto
+// .recruit-2
+// 	.desc
+// 		@apply text-base line-clamp-3
+// 		*
+// 			@apply text-base line-clamp-3
+// 		&.desc-expanded
+// 			height: 100%
+// 			-webkit-line-clamp: unset
+// 			*
+// 				height: 100%
+// 				-webkit-line-clamp: unset
+// 	.btn
+// 		span
+// 			@apply font-normal
+// 		em,i
+// 			&::before
+// 				content: "\f078"
+.recruit-2
+	.swiper-column-auto
+		.swiper
+			.swiper-slide
+				@apply flex flex-col h-auto
+				.item
+					@apply flex flex-col flex-1
+					.title
+						@apply flex-1
+					.desc.is-expanded
+						display: block
+						overflow: visible !important
+						-webkit-box-orient: unset !important
+						-webkit-line-clamp: unset !important
+						line-clamp: unset !important
+					.wrap-btn
+						@apply hidden
+					.content.has-overflow-desc .wrap-btn
+						@apply flex justify-center
+					.wrap-btn 
+						@apply mt-auto
+						a
+							@apply flex items-center justify-center gap-3 text-Primary-1
+					.content
+						@apply flex flex-col flex-1
+.recruit-list
+	.sub-title
+		@apply body-1
+	.filter-table-wrap
+		tbody
+			tr
+				@apply table-row
+	.ajax-btn-wrap
+		&.disble-btn
+			@apply hidden
+	
+	.btn
+		span
+			@apply whitespace-nowrap
+	table
+		@apply overflow-hidden bg-white  border-collapse
+		thead 
+			th
+				@apply  text-white bg-Primary-1 uppercase font-bold text-lg px-5 border  py-4 text-center border-Utility-gray-200
+				*
+					@apply  text-white uppercase font-bold text-lg
+				&:nth-child(1)
+					@apply text-center
+					width: 90px
+					max-width: 90px
+				&:nth-child(2)
+					width: 42.5%
+					@apply text-left
+				&:nth-child(3),&:nth-child(4),&:nth-child(5)
+					width: 17.4%
+				&:nth-child(4)
+					@screen xl
+						@apply px-1
+				@screen xl
+					@apply text-2xl
+					*
+						@apply text-2xl
+		tbody
+			tr
+				&:hover
+					td:nth-child(1),.title
+						@apply text-Primary-1 font-bold
+						*
+							font: inherit
+				&:nth-child(even)
+					@apply bg-Utility-gray-50
+				td
+					@apply px-5  text-center  py-3 border border-Utility-gray-200
+					*
+						@apply body-1
+					&:nth-child(1)
+						@apply text-center font-bold
+						width: 90px
+						max-width: 90px
+					&:nth-child(2)
+						width: 42.5%
+						@apply text-left
+					&:nth-child(3),&:nth-child(4),&:nth-child(5)
+						width: 17.4%
+					&:hover
+						a
+							@apply text-Primary-1 
+				
+	.table-wrap
+		@apply overflow-hidden 
+		@media (max-width: 767.98px)
+			+table-res
+	.btn-tertiary
+		@apply w-full flex-center
+		span
+			@apply text-Primary-1 body-1
+		em,i
+			@apply  text-base text-Primary-1 mx-0 mr-2
+	.ajax-btn-wrap
+		.btn.btn-primary
+			span,em,i
+				@apply text-lg font-normal
+			span
+				@apply normal-case #{!important}
+			&:hover
+			
+				span
+					@apply text-white
+			

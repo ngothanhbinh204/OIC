@@ -1,0 +1,26 @@
+section.home-1
+	.slide(class="relative")
+		.swiper
+			.swiper-wrapper
+				.swiper-slide 
+					.home-1-banner(class="relative")
+						a(href="#" class="img-ratio ratio:pt-[960_1920]") 
+							+PugImg()
+					.home-1-content(class="absolute bottom-0 left-0 w-full rem:pb-[38px]")
+						.container-fluid(class="relative")
+							.wrap-inner(class="rem:max-w-[780px] w-full")
+								+BlockTitle("Evolving With the Market: From Capital Experts to Strategic Partners")
+				.swiper-slide 
+					.home-1-banner(class="relative")
+						a(href="#" class="img-ratio ratio:pt-[960_1920]") 
+							+PugImg("https://picsum.photos/600/400")
+					.home-1-content(class="absolute bottom-0 left-0 w-full rem:pb-[38px]")
+						.container-fluid(class="relative")
+							.wrap-inner(class="rem:max-w-[780px] w-full")
+								+BlockTitle("Evolving With the Market: From Capital Experts to Strategic Partners")
+		.wrap-button-slide
+			.btn.btn-sw-1.btn-prev
+			.btn.btn-sw-1.btn-next
+		.home-1-timeline(class="pointer-events-none absolute bottom-0 left-0 z-10 w-full")
+			.container-fluid(class="relative rem:pb-[34px]")
+				.timeline-swiper(class="w-full rounded-[2px] bg-white/40 h-1 before:absolute before:left-0 before:top-0 before:h-full before:w-[var(--progress)] before:bg-white relative")

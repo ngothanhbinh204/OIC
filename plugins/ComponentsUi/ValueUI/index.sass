@@ -1,0 +1,29 @@
+.about-5-item
+	@apply flex items-center gap-5
+	.icon
+		@apply rem:w-[156px] rem:h-[173px]
+	.caption
+		@apply space-y-1 flex-1
+	.title
+		@apply heading-4 font-bold text-primary-1
+	.desc
+		@apply body-1 font-normal text-utility-gray-500
+.about-5-list
+	@apply grid grid-cols-1 gap-5 md:grid-cols-2
+	@screen md
+		.about-5-item
+			&:nth-child(2n-1)
+				@apply flex-row-reverse text-right
+	@screen xl
+		@apply rem:gap-x-[196px] gap-y-0
+		.about-5-item
+			&:nth-child(3)
+				@apply pr-19
+			&:nth-child(4)
+				@apply pl-19
+.about-5-wrap
+	@apply xl:rem:max-w-[1375px] xl:mx-auto
+	.image-center
+		@apply hidden absolute-center rem:size-[317px] z-1 pointer-events-none xl:flex-center
+.about-5-section
+	background: linear-gradient(180deg, rgba(38, 38, 134, 0.00) 0%, rgba(38, 38, 134, 0.05) 100%)

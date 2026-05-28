@@ -1,0 +1,87 @@
+section.section-history(class="section-py !pb-0")
+	.wrapper
+		.container-fluid
+			h2.title.bottom-title(class="text-right font-bold heading-96") About Us
+			.thumb(class="mb-base")
+				.wrap-slide-years
+					.relative
+						.swiper.history-swiper
+							.swiper-wrapper
+								-for(i=0;i<10;i++)
+									.swiper-slide
+										.item-history(class="flex flex-col items-center gap-8")
+											.content(class="")
+												.icon 
+													img(src="./img/location.svg", alt="" class="img-svg")
+												.number Established in 2017
+											.wrap
+												.line-year
+													.dot-icon 
+														img(src="./img/PIN.svg", alt="" class="img-svg")
+			.main(class="relative mt-base")
+				.swiper.swiper-main
+					.swiper-wrapper 
+						-for(var i = 0; i < 10; i++)
+							.swiper-slide 							
+								.box
+									.item(class="grid xl:grid-cols-2 grid-cols-1 xl:gap-0 gap-base")
+										.col-left(class="xl:pr-[6.15rem]")
+											.title(class="heading-1 text-Primary-1 font-bold mb-base") Established in 2017
+											.format-content(class="body-1 font-light xl:text-justify pr-6")
+												p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt fugiat aperiam illo dolor tempora consequatur, voluptate corrupti eius voluptates odit repellat assumenda a tempore, quia exercitationem consequuntur quam minima magnam.
+												p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut doloribus obcaecati placeat asperiores sit omnis tenetur dolorem magni, atque quam accusamus est dolores eveniet vel iure assumenda ipsam labore sed.
+												p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, enim? Excepturi, doloribus nam quo nisi, veniam asperiores fugit accusamus expedita sint id eum labore consequuntur officia ratione. Ipsum, quam odio.
+										.col-right(class="xl:pl-[5.270833rem]")
+											.swiper.slider-introduce(class="relative")
+												.swiper-wrapper
+													-for(let i=0;i<3;i++)
+														.swiper-slide 
+															.img(class="img-ratio ratio:pt-[413_620]")
+																+PugImg()
+												.arrow-btn(class="flex flex-col gap-3")
+													.btn.btn-sw-1.btn-prev
+													.btn.btn-sw-1.btn-next
+section.service-2(class="section-py")
+	.container-fluid
+		.wrapper-list(class="grid lg:grid-cols-4 grid-cols-2 xl:gap-16 gap-base")
+			-for(i=0;i<4;i++)
+				.item
+					.number.countup(data-number="552") 
+						span.count-value
+						span.suffix +
+					.title(class="body-1 font-normal") Năm kinh nghiệm
+section.service-3(class="section-py !pt-0")
+	.container-fluid
+		.wrap-heading(class="grid lg:grid-cols-2 grid-cols-1 gap-base pb-10 border-b border-b-Utility-gray-200 mb-base")
+			.col-left
+				h2.title.bottom-title(class="font-bold heading-96") Our Services
+			.col-right
+				.sub-title(class="heading-3 font-semibold text-Primary-1-Subtitle mb-4") A Multidisciplinary Approach to Value Creation.
+				.format-content(class="body-1 font-light")
+					p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae porro tempore tempora ut voluptates consectetur dolore earum ea. Labore optio quam quae a illo dolorem quaerat praesentium molestiae magnam quasi!
+		.wrap-main(class="flex flex-col gap-base")
+			-for(a=0;a<4;a++)
+				.wrap-lists(class="grid lg:grid-cols-[calc(784/1600*100%)_1fr] grid-cols-1 xl:rem:gap-[136px] gap-base pb-10 border-b border-b-Utility-gray-200 last:pb-0 last:border-b-0")
+					.col-left 
+						.img 
+							a(href="#" class="img-ratio ratio:pt-[440_784] zoom-img") 
+								+PugImg()
+					.col-right 
+						h2.title(class="heading-1 font-bold text-Primary-1 mb-base") Private Equity
+						.format-content(class="body-1 font-light")
+							ul 
+								-for(i=0;i<3;i++)
+									li Fundraising Readiness
+						.wrap-btn(class="mt-base")
+							+BtnPrimary({option:"style-default"})
+section.service-4(class="xl:py-24 py-10 bg-Utility-gray-100")
+	.wrapper-container(class="xl:rem:pr-[212px] xl:rem:pl-[160px] px-4")
+		+HeadingTitle("What Makes us Different").text-Primary-1.mb-base
+		.wrapper-list(class="row justify-center spacing-48")
+			-for(i=0;i<3;i++)
+				.col-item(class="col-md-4 col-12")
+					.item 
+						.icon
+							<span class="material-symbols-outlined">handshake</span>
+						.desc(class="mt-5 body-2 font-normal") 
+							p Strong, deeply embedded partner relationship network throughout Asia

@@ -1,0 +1,27 @@
+section.home-3(class="section-py overflow-hidden")
+	.decor 
+		img(src="./img/line.png", alt="")
+	.wrap-container.title-fade-left(class="xl:rem:pr-[140px] xl:px-0 px-4 xl:rem:pl-[160px] max-w-full w-full")
+		h2.title.bottom-title(class="text-right font-bold heading-96 xl:mb-0 mb-base") 
+			| Katina 
+			br
+			| Our Value
+		.wrapper-lists(class="flex flex-col gap-25")
+			-for(var i=0;i<3;i++)
+				.wrapper(class="flex lg:flex-row flex-col items-center xl:gap-0 gap-base")
+					.col-left(class="lg:w-6/12 w-full xl:pr-[9.8rem] xl:ml-[2rem]") 
+						.dot 
+							img(src="./img/dot.svg", alt="" class="img-svg")
+						.swiper.slider-introduce(class="relative")
+							.swiper-wrapper
+								-for(let i=0;i<3;i++)
+									.swiper-slide 
+										.img(class="img-ratio ratio:pt-[413_620]")
+											+PugImg()
+							.arrow-btn(class="flex flex-col gap-3")
+								.btn.btn-sw-1.btn-prev
+								.btn.btn-sw-1.btn-next
+					.col-right(class="lg:w-6/12 w-full xl:pl-[5rem] xl:mr-[12.7rem]")
+						h2(class="title title-32 text-Primary-1 font-bold mb-5") Regional Authority
+						.format-content(class="body-1 font-light")
+							p Extensive experience and deep-rooted connections across the Southeast Asian private investment landscape, with a proven track record in Vietnam.

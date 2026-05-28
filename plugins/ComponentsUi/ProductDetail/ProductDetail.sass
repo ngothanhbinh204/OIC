@@ -1,0 +1,170 @@
+.product-detail-1
+	.format-content
+		p
+			@apply mb-2 
+		table
+			@apply w-full table-fixed
+			tbody
+				@apply flex flex-col gap-3
+				tr
+					@apply  bg-orange-400 flex
+					td
+						@apply font-bold w-2/4
+						&.parameter
+							@apply font-normal 
+	.swiper-slide
+		.img
+			a
+				@apply  bg-red-300
+	.thumb
+		@apply xl:py-13 py-10 lg:py-11
+		.swiper
+			@apply absolute inset-0
+			.swiper-slide
+				.img
+					@apply h-full rounded-2
+					a				
+						@apply rounded-2		
+						img
+							@apply border-2 border-transparent rounded-2 
+			.swiper-slide-thumb-active
+				.img
+					a
+						img
+							@apply border-red-600
+	.main
+		@apply rounded-4 overflow-hidden
+		.img
+			a
+				@apply ratio:pt-[667_667]
+	.col-left
+		@apply w-full xl:sticky xl:top-25 h-fit
+	.col-right
+		@apply w-full #{!important}
+		.label
+			@apply whitespace-nowrap
+		.filters
+			@apply mt-4 flex gap-6
+			.value
+				ul
+					@apply flex items-center flex-wrap gap-2
+					li
+						span
+							@apply rem:h-[41px] inline-flex items-center justify-center rounded-full 
+							@apply  font-normal px-4
+						&.active
+							span
+								@apply text-white
+		.price-product
+			@apply flex items-center gap-5 mb-6
+			.price
+				bdi
+					@apply rem:text-[32px] font-bold
+		.wrap-bottom
+			.button-contact
+				@screen -md
+					@apply whitespace-normal flex-col gap-2
+				a
+					@screen -md
+						@apply w-full
+			.commercial
+				@apply mt-4 mb-3
+				.commercial-img
+					img
+						@apply max-w-full
+			.share
+				.social
+					a
+						@apply sq-8 rounded-full inline-flex items-center justify-center bg-transparent
+.product-detail-2
+	.wrap
+		ul
+			@apply flex items-center lg:justify-center gap-base whitespace-nowrap overflow-auto lg:pb-0 pb-3
+			li
+				@apply inline-flex py-5 border-b-2 border-b-transparent
+				&.active
+					@apply border-b-Primary-2
+					a
+						@apply text-white
+				&:hover
+					@apply border-b-Primary-2
+					a
+						@apply text-Primary-1
+	.wrap-content
+		@apply mt-base
+		.tabslet-content
+			@apply rounded-4 lg:p-10 p-5
+			.format-content
+				p
+					@apply mb-4
+			.btn-view-more 
+				@apply flex-center mt-8
+				button
+					@apply flex items-center gap-3 text-Primary-1
+					.icon
+						@apply flex items-center justify-center
+					i
+						@apply heading-1
+.product-detail-3
+	.swiper-column-auto
+		.swiper-slide
+			--spv: 2
+			--mr: calc(8/1920*100rem)
+			@apply flex flex-col h-auto
+			.product-item
+				@apply flex flex-col flex-1
+				.content
+					@apply flex flex-col flex-1
+			@screen sm
+				--spv: 2
+				--mr: calc(16/1920*100rem)
+			@screen md
+				--spv: 2
+				--mr: calc(16/1920*100rem)
+			@screen lg
+				--spv: 3
+				--mr: calc(24/1920*100rem)
+			@screen xl
+				--spv: 4
+				--mr: calc(40/1920*100rem)
+.product-detail-4
+	.swiper-column-auto
+		.swiper-slide
+			--spv: 2
+			--mr: calc(8/1920*100rem)
+			@apply flex flex-col h-auto
+			@screen sm
+				--spv: 2
+				--mr: calc(16/1920*100rem)
+			@screen md
+				--spv: 2
+				--mr: calc(16/1920*100rem)
+			@screen lg
+				--spv: 3
+				--mr: calc(24/1920*100rem)
+			@screen xl
+				--spv: 4
+				--mr: calc(40/1920*100rem)
+			.product-item
+				@apply bg-white
+#form-contact-product
+	@apply lg:rem:w-[800px] w-full  relative  xl:p-16 p-5 rounded-6
+	.carousel__button
+		position: absolute !important
+		top: 0.5rem !important
+		right: 0.5rem !important
+		@apply sq-10 z-100 cursor-pointer bg-red-600
+		svg
+			@apply rem:w-[16px] rem:h-[16px]
+	form.wpcf7-form.submitting
+		button
+			&[type="submit"]
+				@apply pointer-events-none cursor-not-allowed
+	
+		// &.invalid
+		// 	.form-wrap
+		// 		@apply gap-0
+		// 	.form-group
+		// 		&.form-input-file
+		// 			@apply my-5
+		

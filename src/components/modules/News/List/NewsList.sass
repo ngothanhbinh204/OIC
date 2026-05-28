@@ -1,0 +1,54 @@
+.news
+	ul.nav-primary
+		li
+			a
+				@apply body-1
+	.tab-news-item
+		.img-thumb
+			@apply lg:w-[65.72%]
+		.block-info
+			@apply flex-1
+			.title
+				@apply pb-4 border-b border-b-Utility-gray-100
+	.pagination
+		@apply mt-0
+	.news-main
+		.col-left
+			.news-item
+				@apply flex flex-col h-full
+				.content
+					@apply flex flex-col flex-1
+				.title
+					@apply heading-3 line-clamp-1
+				.bottom
+					.desc
+						@apply line-clamp-2
+				&:hover
+					.content
+						.bottom
+							.title
+								@apply text-Primary-1
+		.col-right
+			@apply flex flex-col gap-6
+			.news-item
+				.title
+					line-height: calc(32/24)
+					@apply heading-3 line-clamp-2
+				.desc
+					line-height: calc(22/16)
+					@apply line-clamp-2
+				.content
+					@apply bg-transparent p-3
+
+				&:hover
+					.content
+						.bottom
+							.title
+								@apply text-Primary-1
+	.news-list
+		.news-item
+			@apply grid-cols-1
+			.content
+				.bottom
+					.title
+						@apply line-clamp-2

@@ -1,0 +1,9 @@
+{
+	"version": 1,
+	"skills": {
+		"animejs": {
+			"source": "bowtiedswan/animejs-skills",
+			"sourceType": "github"
+		}
+	}
+}

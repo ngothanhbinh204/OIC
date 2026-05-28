@@ -1,0 +1,21 @@
+section.section-certification(class="section-py bg-BG relative overflow-hidden")
+	.container.relative.z-1
+		.wrap-heading(class="text-center mb-base")
+			.sub-title(class="heading-4 font-semibold text-Utility-gray-500 mb-3") CERTIFICATES & ACHIEVEMENTS
+			h2.title(class="heading-1 ") Comprehensive mineral solutions for all industries
+		.big-wrapper
+			.relative(class="mt-10")
+				.ratio-wrapper(class="lg:img-ratio lg:ratio:pt-[495_1434]")
+					.ratio-inner(class="lg:absolute inset-0 w-full h-full")
+						.wrapper(class="lg:overflow-hidden h-full flex items-center")
+							.swiper
+								.swiper-wrapper
+									-for(i=0;i<10;i++)
+										.dynamic-slide.swiper-slide
+											.img(class="transition-all duration-500")
+												a(href="./img/1.jpg" data-fancybox="gallery" class="img-ratio ratio:pt-[364_264] zoom-img") 
+													+PugImg()
+											.content(class="text-center flex flex-col rem:gap-[6px] text-white")
+												.title(class="font-bold") Chứng nhận TCVN
+												.code(class="body-1 font-bold") 9001:2015 - ISO9001:2015
+												.sub-title(class="font-medium") Nhà máy Nhơn Trạch

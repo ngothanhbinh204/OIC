@@ -1,0 +1,22 @@
+section.section-home-project(class="section-py bg-linear-2")
+	.container 
+		h2.heading-1.text-center.mb-base Dự án nổi bật
+	.swiper-column-auto.center.swiper-loop.mb-base
+		.swiper
+			.swiper-wrapper
+				-for(a=0;a<5;a++)
+					.swiper-slide
+						.item-image.relative
+							div(class="img img-ratio ratio:pt-[653_1160]")
+								+PugImg()
+							div(class="content-wrap")
+								.title(class="flex flex-col gap-3 items-start")
+									h3.title-24(class="font-semibold") Nhà máy Posco Viet Nam
+									.ctn(class="text-Neutral-600 ") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac 
+								.flex(class="gap-base")
+									-for(i=0;i<2;i++)
+										.item-info(class="flex flex-col flex-1")
+											.title(class="text-Primary-1 text-sm uppercase") Địa điểm
+											.ctn(class="") Đồng Nai, TP. HCM
+									.btn.btn-arrow
+										i.fa-light.fa-arrow-up-right

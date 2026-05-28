@@ -1,0 +1,58 @@
+.product-detail-1
+	.format-content
+		p
+			@apply mb-2 
+		table
+			@apply w-full table-fixed
+			tbody
+				@apply flex flex-col gap-3
+				tr
+					@apply  bg-orange-400 flex
+					td
+						@apply font-bold w-2/4
+						&.parameter
+							@apply font-normal 
+	.swiper-slide
+		.img
+			a
+				@apply  bg-[#EFEFEF]
+	.thumb
+		@apply px-5.5
+		.swiper			
+			.swiper-slide
+				.img
+					@apply h-full rounded-full
+					a				
+						@apply rounded-full
+						img
+							@apply border border-transparent rounded-full
+			.swiper-slide-thumb-active
+				.img
+					a
+						img
+							@apply border-Primary-2
+	.main
+		@apply rounded-4 overflow-hidden
+		.img
+			a
+				@apply ratio:pt-[667_667]
+	.col-left
+		@apply xl:sticky xl:top-25 h-fit
+	.col-right
+		@apply w-full #{!important}
+		.label
+			@apply whitespace-nowrap
+		.wrap-desc
+			.format-content
+				ul
+					@apply mb-0
+		.share
+			ul
+				@apply flex items-center rem:gap-[14px]
+				li
+					a
+						@apply sq-10 inline-flex items-center justify-center 
+						@apply border border-[#dcdcdc] rounded-2 body-2 text-Utility-gray-600-secondarytext
+					&:hover
+						a
+							@apply bg-Primary-1 text-white

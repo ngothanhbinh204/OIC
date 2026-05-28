@@ -1,0 +1,26 @@
+section.section-news(class="section-py")
+	.container
+		.news(class="flex flex-col gap-base")
+			.news-heading-and-tab(class="flex-center flex-wrap gap-4")
+				//- block uppdate mới 
+				ul.nav-primary
+					-for(let i=0;i<4;i++)
+						li 
+							a(href="#") Tất cả
+			.tab-news-item(class="flex -lg:flex-col items-stretch rounded-5 overflow-hidden")
+				.img-thumb(class="w-full lg:shrink-0 lg:w-[calc(1184/1600*100%)]")
+					a(href="#!" class="img-ratio ratio:pt-[652_1184]")
+						+PugImg() 
+				.block-info(class="flex flex-col justify-center p-10 bg-Primary-1")
+					span.date(class="body-4 text-white") 30/06/2025
+					h3.title(class="heading-3 mt-2 text-white -xl:line-clamp-3 line-clamp-4") 30 suất học bổng toàn phần ngành Quản trị Kinh doanh định hướng Trà học cho 2K7
+					p.desc(class="body-1 mt-6 text-white -xl:line-clamp-4 line-clamp-7") Lorem ipsum dolor sit amet consectetur. Fames at tincidunt at risus eu posuere. Ullamcorper ac pellentesque quis non fermentum. Pellentesque et ornare laoreet dignissim. In dolor sed elementum hendrerit auctor.Lorem ipsum dolor sit amet consectetur. Fames at tincidunt at risus eu posuere. 
+					a(href="#!" class="inline-block body-1 text-Primary-1 mt-10") Thông báo tuyển sinh 
+			ul.list-news(class="grid grid-cols-2 md:grid-cols-3 gap-base")
+				-for(let i=0;i<8;i++)
+					+NewsItem()
+			.pagination(class="flex-center")
+				ul
+					-for(let i=0;i<3;i++)
+						li 
+							a(href="#") #{i+1}

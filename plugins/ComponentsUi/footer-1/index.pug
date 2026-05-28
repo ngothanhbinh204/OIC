@@ -1,0 +1,71 @@
+footer.footer(class="bg-gray-500 xl:pt-15 xl:pb-8 py-10")
+	.container-160
+		.footer-top(class="flex items-center justify-between")
+			.footer-logo(class="rem:w-[86px]")
+				a(href="#" class="img-ratio ratio:pt-[62_86]") 
+					+PugImg("./img/Logo.svg")
+			.footer-top-social 
+				ul 
+					-for(var i = 0; i < 4; i ++)
+						li
+							a(href="#") 
+								<i class="fa-brands fa-facebook-f"></i>
+		.footer-mid
+			.footer-wrapper(class="grid lg:grid-cols-[5fr_5fr_2fr] md:grid-cols-1 gap-7")
+				.footer-column 
+					h3.title(class="font-semibold mb-4 text-base") DLH GLOBAL JOINT STOCK COMPANY
+					.wrapper-content(class="flex flex-col gap-4")
+						-for(var j = 0; j < 2; j ++)
+							.footer-contact 
+								.sub-title(class="font-semibold mb-3") Headquarters
+								ul.infos(class="flex flex-col gap-1")
+									-for(var i = 0; i < 3; i ++)
+										li 
+											a(href="#") 
+												.icon 
+													<i class="fa-light fa-location-dot"></i>
+												span 5th Floor, Transco Building, No. 05 Lot 2B, Le Hong Phong Street, Ngo Quyen Ward, Hai Phong City, Vietnam.
+				.footer-column 
+					h3.title(class="font-semibold mb-4 text-base") FACTORY 
+					.footer-contact 
+						ul.infos(class="flex flex-col gap-1")
+							-for(var i = 0; i < 3; i ++)
+								li 
+									a(href="#") 
+										.icon 
+											<i class="fa-light fa-location-dot"></i>
+										span 5th Floor, Transco Building, No. 05 Lot 2B, Le Hong Phong Street, Ngo Quyen Ward, Hai Phong City, Vietnam.
+				.footer-column 
+					h3.title(class="font-semibold mb-4 text-base") QUICK LINKS 
+					ul.footer-menu 
+						-for(var i = 0; i < 6; i ++)
+							li 
+								a(href="#") About us
+		.footer-bottom(class="flex md:flex-row md:gap-0 gap-4 flex-col items-center justify-between body-4 font-secondary")
+			.footer-copyright(class="text-Primary-1/80 md:text-left text-center")
+				p © 2025 DLH Global. All Rights Reserved. Website designed by CanhCam. 
+			.footer-policy
+				ul 
+					li 
+						a(href="#") Giới thiệu
+					li 
+						a(href="#") Lĩnh vực hoạt động
+	.tool-fixed-cta
+		.tool-cta-item.tool-cta-share
+			a(href="#")
+				<i class="fa-solid fa-share-nodes"></i>
+			.tool-cta-item
+				a(href="tel:+84123456789")
+					<i class="fa-solid fa-phone"></i>
+			.tool-cta-item
+				a(href="https://wa.me/84123456789" target="_blank")
+					<i class="fa-brands fa-whatsapp"></i>
+			.tool-cta-item
+				a(href="https://wa.me/84123456789" target="_blank")
+					<i class="fa-brands fa-whatsapp"></i>
+			.tool-cta-item
+				a(href="https://m.me/yourpage" target="_blank")
+					<i class="fa-brands fa-facebook-messenger"></i>
+		.btn.button-to-top
+			.btn-icon
+				.icon

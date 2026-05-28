@@ -1,0 +1,110 @@
+.btn
+	@apply cursor-pointer select-none transition-all duration-300
+	&.loading
+		@apply bg-transparent #{!important}
+		span,.icon
+			@apply opacity-0
+		&::before
+			content: ''
+			animation-duration: 0.5s
+			@apply w-5 h-5 border-3 border-white/40 border-t-white rounded-full inline-block
+			@apply absolute animate-spin
+	&.btn-sw-1
+		@apply sq-10 rounded-full  flex-center bg-transparent
+		@apply border-2 border-Utility-gray-200
+		&::before
+			@apply font-awesome text-Utility-gray-950-maintext text-lg font-normal
+		&.btn-prev
+			&::before
+				content: '\f053'
+		&.btn-next
+			&::before
+				content: '\f054'
+				@apply font-awesome
+		&:hover
+			@apply bg-Primary-1 border-transparent
+			&::before
+				@apply text-Utility-white
+	// button chạy icon sang trái
+	// +BtnPrimary({option:"style-white"})
+	&.btn-primary
+		@apply rem:h-[48px] inline-flex items-center justify-center md:px-6 px-3 rounded-1  gap-2
+		&.style-default
+			@apply bg-transparent border border-Utility-gray-950-maintext text-Utility-gray-950-maintext
+		&.white
+			@apply border
+		&.style-transparent
+			@apply bg-transparent border border-transparent text-white px-0
+			@apply border-b rounded-none h-auto
+			span
+				@apply text-white border-Utility-gray-100
+			.icon
+				&::before,&::after
+					@apply text-white
+			&:hover
+				@apply bg-transparent border-transparent
+				@apply shadow-none border-b-white
+		&:hover
+			@apply text-white shadow-Shadow-1 bg-Primary-1
+			.icon
+				&::before, &::after
+					@apply text-white
+					@apply translate-x-full opacity-0
+				&::after
+					@apply translate-x-0 opacity-100 font-bold
+			span
+				@apply text-white
+		span
+			@apply rem:text-[16px] font-semibold text-Primary-1
+		i
+			@apply flex-center rem:w-[24px] relative overflow-hidden h-8 bg-transparent text-Primary-1
+			&::before,&::after
+				content: '\f061'
+				@apply font-awesome text-xl inline-block transition-all absolute font-normal leading-none duration-300
+			&::after
+				@apply -translate-x-full opacity-0
+				
+				
+	// button outline
+	
+	// button border linear
+	&.btn-linear
+		border-image-source: linear-gradient(95deg, #005060 0.53%, #006766 26.9%, #07A226 58.42%, #64C604 87.82%)
+		border-image-slice: 1
+		@apply sq-15 py-2 px-5  flex-center bg-transparent border
+		@screen -md
+			@apply w-[2.125rem] h-[2.125rem]
+		&::before, &::after
+			@apply font-awesome text-Primary-1  font-extrabold text-2xl
+			@screen -md
+				@apply text-[0.9625rem]
+		&.btn-prev
+			&::before
+				content: '\f30a'
+				@apply transition-all duration-300
+			&::after
+				content: '\f30a'
+				@apply font-awesome inline-block transition-all absolute leading-none duration-300
+				@apply translate-x-full opacity-0
+		&.btn-next
+			&::before
+				content: '\f30b'
+				@apply font-awesome  transition-all duration-300
+			&::after
+				content: '\f30b'
+				@apply font-awesome inline-block transition-all absolute leading-none duration-300
+				@apply -translate-x-full opacity-0
+		&:hover
+			background: linear-gradient(95deg, #005060 0.53%, #006766 26.9%, #07A226 58.42%, #64C604 87.82%)
+			&::before,&::after
+				@apply text-Utility-white
+			&.btn-next
+				&::after
+					@apply translate-x-0 opacity-100
+				&::before
+					@apply -translate-x-full opacity-0
+			&.btn-prev
+				&::after
+					@apply translate-x-0 opacity-100
+				&::before
+					@apply -translate-x-full opacity-0

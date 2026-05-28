@@ -1,0 +1,37 @@
+.section-change-big-image
+	.bottom-title
+		@apply xl:rem:text-[84px]
+	.big-wrapper
+		@apply rem:min-h-[1063px]
+	.list-contents
+		@apply lg:max-w-[64%] xl:max-w-[calc(550/1760*100%)]
+		@apply min-h-[50vw] lg:rem:min-h-[480px]
+	nav
+		@apply flex-1 flex justify-end
+		@screen -lg
+			@apply justify-start
+			ul
+				@apply flex gap-x-10 gap-y-6 flex-wrap
+	.bottom-title
+		@apply bottom-4 xl:bottom-[calc(100/1063*100%)]
+		@apply lg:absolute w-full
+		@apply text-center lg:text-right
+		@screen -lg
+			@apply mt-10 mb-5
+	[tab-item]
+		&.active
+			.item-wrapper
+				@apply opacity-100
+			.line
+				@screen lg
+					@apply rem:w-[210px]
+	.images
+		&::before
+			content: ''
+			background: linear-gradient(98deg, rgba(0, 0, 0, 0.00) 6.67%, rgba(0, 0, 0, 0.75) 100%)
+			@apply absolute inset-0 z-2
+		[tab-content]
+			@apply block #{!important}
+			@apply -z-1 opacity-0
+			&.active
+				@apply z-1 opacity-100

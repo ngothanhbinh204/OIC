@@ -1,0 +1,123 @@
+.section-business
+	@apply rem:h-[742px] overflow-hidden relative
+	@screen -xl
+		@apply h-auto min-h-0
+	&::before
+		content: ''
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%)
+		@apply absolute top-0 left-0 w-full h-full z-1 pointer-events-none
+	@screen -xl
+		@apply flex flex-col justify-center
+	.wrap-title
+		@apply relative xl:mt-20 z-2
+		.title-linear
+			opacity: 0.3
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 81.38%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@apply absolute top-[-6rem] left-[-9.2rem] rem:text-[140px] font-black xl:block hidden 
+	.sub-title
+		@apply relative z-5
+	.wrapper
+		@apply relative z-2
+		.item
+			@apply relative transition-transform ease-linear duration-700
+			.number
+				@apply leading-none
+				.desc
+					line-height: calc(28/20)
+			@screen -xl
+				@apply pr-0
+			// &:last-child
+			// 	@screen -md
+			// 		@apply col-span-full flex items-center flex-col
+			&::before
+				content: ""
+				@apply absolute left-[-0.95833rem] w-[1px] rem:h-[480px] bg-white/30 transition-transform ease-linear duration-700
+				@screen xl
+					@apply top-[-4rem]
+				@screen -xl
+					@apply hidden
+			&::after
+				content: ""
+				background: linear-gradient(1deg, #F27405 16.19%, #F2CD5C 43.39%, #F28705 107.03%)
+				@apply w-1 h-15 absolute top-0 left-[-0.95833rem]
+				@screen -xl
+					@apply hidden
+			&:nth-child(2)
+				&::before
+					@apply rem:h-[650px] top-[-7.2rem]
+			&:nth-child(3)
+				&::before
+					@apply rem:h-[750px] top-[-12rem]
+			&:nth-child(4)
+				&::before
+					@apply rem:h-[900px] top-[-24rem]
+			&:last-child
+				&::before
+					@apply rem:h-[900px] top-[-24rem]
+			.desc
+				@apply opacity-0 pointer-events-none overflow-hidden translate-y-5
+				@apply transition-all ease-in-out duration-700
+				transform: translateY(1.25rem) scaleY(0)
+				transform-origin: top
+				max-height: 0
+				will-change: max-height, opacity, transform
+				@screen -xl
+					@apply opacity-100 pointer-events-auto translate-y-0
+					transform: translateY(0) scaleY(1)
+					max-height: none
+		@screen -xl
+			@apply mt-[4rem]
+		@screen -md
+			@apply  mt-[1.5rem]
+	@screen xl
+		&:hover,
+		&.animated
+			.item
+				.desc
+					@apply opacity-100 pointer-events-auto translate-y-0
+					transform: translateY(0) scaleY(1)
+					max-height: 500px
+					will-change: auto
+				&:first-child
+					transform: translateY(calc(-20px - 1rem))
+					transition-delay: 0ms
+					&::before
+						transform: translateY(calc(20px + 1rem))
+						transition-delay: 0ms
+					.desc
+						transition-delay: 0ms
+				&:nth-child(2)
+					@apply -translate-y-25
+					transition-delay: 150ms
+					&::before
+						@apply translate-y-25
+						transition-delay: 150ms
+					.desc
+						transition-delay: 150ms
+				&:nth-child(3)
+					@apply -translate-y-36
+					transition-delay: 150ms
+					&::before
+						@apply translate-y-30
+						transition-delay: 150ms
+					.desc
+						transition-delay: 150ms
+				&:nth-child(4)
+					@apply -translate-y-[10rem]
+					transition-delay: 150ms
+					&::before
+						@apply translate-y-25
+						transition-delay: 150ms
+					.desc
+						transition-delay: 150ms
+				&:last-child
+					@apply -translate-y-[13.46667rem]
+					transition-delay: 300ms
+					&::before
+						@apply translate-y-42
+						transition-delay: 300ms
+					.desc
+						transition-delay: 300ms

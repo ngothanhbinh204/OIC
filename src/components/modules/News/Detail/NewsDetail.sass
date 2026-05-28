@@ -1,0 +1,21 @@
+.news-other
+	.swiper-column-auto
+		.swiper-slide
+			--spv: 2
+			@screen sm
+				--spv: 1
+			@screen md
+				--spv: 3
+			@screen lg
+				--spv: 3
+				--mr: calc(40/1920*100rem)
+.news-detail 
+	.wrap-content
+		.format-content
+			@apply body-1 space-y-5 border-t border-t-Utility-gray-200 pt-5
+			table
+				@apply w-full
+				tbody
+					tr
+						td
+							@apply border border-Utility-gray-200 p-2

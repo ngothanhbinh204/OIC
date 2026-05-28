@@ -1,0 +1,29 @@
+section.news-detail(class="section-py")
+	.container 
+		h2(class="heading-2 font-extrabold mb-6") FBV tổ chức lễ khởi công dinh thự Regal Signature Villas thuộc dự án regal legend
+		time(class="body-4 mb-base text-Utility-gray-500 font-normal") 01-05-2024
+		.swiper-column-auto(class="mt-base")
+			.swiper 
+				.swiper-wrapper
+					.swiper-slide 
+						.img 
+							a(href="#" class="img-ratio ratio:pt-[788_1400] rounded-5 zoom-img") 
+								+PugImg()
+		.wrap-content(class="rem:max-w-[1050px] w-full mx-auto mt-base")
+			.format-content(class="font-normal")
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, reprehenderit! Ea magni numquam vel corrupti mollitia officiis ut, corporis, enim impedit esse ratione. Corrupti ullam libero neque quis obcaecati praesentium.
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium deserunt at nobis, id sint quas quod aliquam expedita error eaque ratione blanditiis non consectetur odio nulla, repudiandae laborum, quos deleniti?
+				p 
+					+PugImg()
+section.news-other(class="section-py bg-Utility-gray-50")
+	.container 
+		h2.title(class="heading-2 font-bold text-Primary-2 mb-base text-center") Bài viết liên quan
+		.swiper-column-auto(class="relative swiper-loop autoplay")
+			.swiper 
+				.swiper-wrapper
+					-for(var i = 0; i < 8; i++) 
+						.swiper-slide 
+							+NewsItem()
+			.wrap-button-slide 
+				.btn.btn-sw-1.btn-prev
+				.btn.btn-sw-1.btn-next

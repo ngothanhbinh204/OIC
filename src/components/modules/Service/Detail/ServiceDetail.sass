@@ -1,0 +1,87 @@
+.service-detail-1
+	@apply xl:pb-[5.6rem] xl:pt-20 #{!important}
+	.wrap-content
+		.title
+			@screen -md
+				@apply rem:text-[40px]
+.service-detail-2
+	.wrapper-main
+		.col-left
+			.image-ratio 
+				@screen -xl
+					@apply h-full
+		.col-right
+			@apply rem:min-h-[880px] h-full
+			.item
+				@apply xl:rem:pl-[120px] xl:rem:pr-[160px] py-5
+				@screen -xl
+					@apply p-0
+				a
+					@apply flex gap-6 items-center transition-all ease-in-out duration-300
+					@screen -lg
+						@apply items-center
+					.number
+						-webkit-text-stroke-width: 1px
+						-webkit-text-stroke-color: var(--Utility-gray-300, #BDBDBD)
+						@apply heading-banner uppercase text-transparent
+						@apply w-20 flex-shrink-0
+					.caption
+						.title
+							line-height: calc(32/24)
+							@apply font-semibold
+						.format-content
+							transition: opacity 0.45s ease 0.28s, transform 0.45s ease 0.28s
+							@apply xl:opacity-0  xl:translate-y-[1rem]
+							@screen -lg
+								@apply text-white absolute opacity-0
+							p
+								line-height: calc(25/18)
+				.img
+					a
+						@apply pt-0 transition-all duration-500
+				&.active
+					@apply bg-Primary-1
+					.img
+						a
+							@apply ratio:pt-[760_880] img-ratio
+					a
+						@apply items-start p-4
+						.number
+							-webkit-text-stroke-width: unset
+							-webkit-text-stroke-color: unset
+							@apply text-Primary-1-Subtitle
+					.caption
+						.title
+							@apply text-Primary-1-Subtitle
+						.format-content
+							@apply opacity-100 translate-y-0 static
+					.toggle-hidden
+						grid-template-rows: 1fr
+.service-detail-3
+	.swiper-column-auto						
+		.swiper
+			.swiper-slide
+				@apply pt-5
+				@apply will-change-transform
+				@apply transition-all ease-in-out duration-500
+				--mr: calc(32/1920*100rem)
+				@screen -md
+					--spv: 1
+				.content
+					ul
+						@apply gap-0
+					.wrap-btn
+						@apply opacity-0 transition-all ease-in-out duration-500
+						@apply translate-y-3 mt-5 pointer-events-none
+						@screen -xl
+							@apply opacity-100 translate-y-0 pointer-events-auto
+				&:hover
+					transform: translate3d(0, -1.2rem, 0)
+					.content
+						.wrap-btn
+							@apply pointer-events-auto opacity-100 translate-y-0
+		.wrap-button-slide
+			.btn-prev
+				@apply top-[31%] #{!important}
+			.btn-next
+				@apply top-[31%] #{!important}

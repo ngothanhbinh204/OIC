@@ -1,0 +1,45 @@
+section.team-1(class="section-py !pb-0")
+	.container 
+		.wrap-content(class="rem:max-w-[1218px] w-full mx-auto text-center")
+			.wrap-heading 
+				+HeadingTitle("Katina Mission").text-Primary-1
+				.format-content(class="body-1 font-light xl:my-12 my-10")
+					p At KCP, we don’t just allocate capital; we engineer lasting value. Our strategy focuses on Core+ and Value-Add deals specifically selected for their ability to deliver superior risk-adjusted returns, and always anchored by a "safety-first" philosophy and a commitment to capital preservation.
+			.swiper-column-auto(class="relative swiper-loop autoplay")
+				.swiper
+					.swiper-wrapper
+						-for(i=0;i<4;i++)
+							.swiper-slide
+								.img(class="img-ratio ratio:pt-[716_1218] zoom-img")
+									+PugImg()
+				.wrap-button-slide
+					.btn.btn-sw-1.btn-prev
+					.btn.btn-sw-1.btn-next
+section.team-2(class="xl:pt-24 xl:rem:pb-[88px] py-10")
+	.container-fluid 
+		.swiper-column-auto(class="relative auto-4-column swiper-loop autoplay")
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<4;i++)
+						.swiper-slide
+							.item
+								.img
+									a(href="#popup-team" data-fancybox class="img-ratio ratio:pt-[420_356] zoom-img") 
+										+PugImg()
+								.content(class="xl:pt-8 pt-4")
+									.wrap-top(class="mb-8")
+										.name(class="heading-3 font-bold underline mb-2") Tony Kuo
+										.role(class="body-1 font-light") Ceo & Managing Partner
+									.wrap-btn 
+										+BtnPrimary({option:"style-default"})
+#popup-team(style="display: none;" data-fancybox-modal)
+	.popup-content(class="w-full relative z-50 xl:px-20 xl:py-10 p-4")
+		.wrapper(class="grid grid-cols-[calc(216/756*100%)_1fr] xl:gap-15 gap-base") 
+			.img(class="img-ratio ratio:pt-[255_216] zoom-img")
+				+PugImg()
+			.infos(class="text-white mt-12")
+				.name(class="heading-3 font-bold mb-2") Tony Kuo
+				.role(class="body-1 font-light") Ceo & Managing Partner
+		.wrap-content(class="mt-9") 
+			.format-content(class="body-1 font-light")
+				p With over 20 years of experience in the finance and capital market, Tony played a pivotal role at Standard Chartered Bank (Vietnam) and HSBC Vietnam where he focused on high-growth segments including local corporates, middle market, commodity, and agribusiness. Tony drove cross-border business with various notable achievements, including orchestrating the first USD 430 million M&A sell-side mandate for Kinh Do Corporation and structuring key deals such as the Structured Warehouse Financing for Simexco DakLak. Now, he is the Managing Partner and CEO at KCPS, leveraging his extensive experience in the capital market to drive the maximized returns for investors.

@@ -1,0 +1,31 @@
+section.home-2.home-item-animation(class="section-py")
+	.container-fluid 
+		.wrapper-main(class="grid lg:grid-cols-[calc(780/1600*100%)_1fr] grid-cols-1 xl:gap-base gap-4")
+			.col-left(class="xl:py-16 py-10")
+				+BlockTitle("Katina Capital Partners")
+				.sub-title(class="heading-3 font-semibold mt-5 mb-base text-Primary-1-Subtitle" animate-title="fade-up") A Strategic Bridge Between Capital and Concrete.
+				.format-content(class="body-1 font-light mb-base space-y-8" data-aos="fade-right" data-aos-delay="200" data-aos-duration="700")
+					p Founded in 2017, Katina Capital Partners (KCP) is a dedicated investment house born from a committed partnership between Fund management experts and Industry professionals. We specialize in three core pillars: Private Equity, Project-based Advisory, Asset Management and Renewable Energy.
+					p At KCP, we don’t just allocate capital; we engineer lasting value. Our strategy focuses on Core+ and Value-Add deals specifically selected for their ability to deliver superior risk-adjusted returns, and always anchored by a "safety-first" philosophy and a commitment to capital preservation.
+				.wrap-btn(data-aos="fade-right" data-aos-delay="400" data-aos-duration="700")
+					+BtnPrimary({option:"style-default", text:"Tìm hiểu thêm", href:"#", icon:true})
+				.wrap-list(class="flex flex-wrap gap-5 xl:mt-16 mt-base") 
+					.item
+						.number.countup(data-number="552") 
+							span.count-value
+							span.suffix B
+						.title(class="body-1 font-normal") Năm kinh nghiệm
+					.item
+						.number.countup(data-number="552") 
+							span.count-value
+							span.suffix +
+						.title(class="body-1 font-normal") Năm kinh nghiệm
+					.item
+						.number.countup(data-number="552") 
+							span.count-value
+							span.suffix +
+						.title(class="body-1 font-normal") Năm kinh nghiệm
+			.col-right(data-aos="fade-left" data-aos-delay="600" data-aos-duration="700")
+				.img 
+					a(href="#" class="img-ratio ratio:pt-[774_798]") 
+						+PugImg("./img/2.png")

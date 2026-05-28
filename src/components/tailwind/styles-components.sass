@@ -1,0 +1,184 @@
+@layer components
+	*::-webkit-scrollbar
+		@apply w-[calc(4/1920*100rem)] h-[calc(4/1920*100rem)]
+	*::-webkit-scrollbar-track
+		background-color: rgba(#e5e5e5,.2 )
+	*::-webkit-scrollbar-thumb
+		@apply bg-Primary-1
+	.swiper-slide.dynamic-slide
+		width: calc(calc(100% - calc(var(--mr) * calc(var(--spv) - 1)))/var(--spv))
+		&:not(:last-child)
+			margin-right: var(--mr)
+	.subscribe-group
+		@apply flex items-center gap-2 bg-Primary-1
+	.wrap-show-content
+		.show-content
+			@apply rem:max-h-[200px] overflow-hidden
+		&.toggle-content
+			.show-content
+				@apply max-h-[1000px]
+			.btn-expand
+				.icon
+					@apply rotate-180
+	.social-list
+		@apply flex items-center gap-2
+		li
+			a
+				@apply sq-8 inline-flex items-center justify-center bg-orange-400
+				i
+					@apply font-normal
+	.mission-item
+		@apply relative overflow-hidden rounded-5
+		.image
+			a
+				@screen -xl
+					@apply rounded-b-none
+		.caption
+			backdrop-filter: blur(0px)
+			@apply absolute left-0 w-full bottom-0 flex flex-col items-center
+			@apply xl:py-4 xl:px-10 px-5 py-4
+			@apply text-center h-full rounded-b-5
+			@apply translate-y-[calc(100%-4.5rem)]
+			transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1)
+			will-change: transform
+			@screen -xl
+				@apply static translate-y-0
+			.title
+				@apply heading-3 font-bold text-white
+			.desc
+				@apply text-white text-left body-2 font-medium
+				@screen -xl
+					@apply mt-2
+			&::before, &::after
+				content: ''
+				@apply absolute inset-0 -z-1 pointer-events-none
+				@apply transition-opacity duration-300 ease-in-out
+			&::before
+				@apply bg-Primary-1
+			&::after
+				@apply bg-Primary-1 
+		@screen xl
+			.caption
+				&::before
+					@apply opacity-100
+				&::after
+					@apply opacity-0
+			&:hover
+				.caption
+					transform: translateY(0)
+					@apply gap-4 justify-center
+					&::before
+						@apply opacity-0
+					&::after
+						@apply opacity-100 
+				.toggle-hidden
+					grid-template-rows: 1fr
+	#menu-spy
+		@apply top-[var(--header-height)] sticky z-50 bg-transparent xl:px-12 px-4
+		ul
+			overscroll-behavior: contain
+			transform: translate3d(0, 0, 0)
+			will-change: transform
+			@apply flex items-center lg:justify-between overflow-x-hidden whitespace-nowrap gap-base
+			@screen -md
+				@apply px-4
+			li
+				a
+					@apply font-normal inline-flex py-7
+				&.active, &:hover
+					a
+						@apply text-Primary-1
+	.indicator-swipe
+		@apply z-30 px-3 
+		@apply w-[calc(104/19.2*1rem)] h-14 rounded-full
+		@apply flex justify-between items-center
+		@apply transition-all pointer-events-none
+		&:not(.active)
+			@apply opacity-0
+		svg
+			@apply stroke-white
+		.hand
+			animation: moveSwipeGesture 2.25s infinite ease-in-out
+			@apply md:w-16 md:h-12 w-10 h-10
+	.nav-primary
+		@apply flex items-center justify-center gap-4 
+		@apply  whitespace-nowrap
+		@screen -xl
+			@apply overflow-auto
+		@screen -md
+			@apply justify-normal pb-3
+		li
+			@apply rounded-full
+			a
+				letter-spacing: -0.56px
+				@apply inline-flex items-center justify-center 
+				@apply rounded-full overflow-hidden px-5 h-9 border border-Utility-gray-200 text-Primary-4-Subtitle font-semibold body-4
+				@apply bg-transparent font-semibold
+			&.active, &:hover
+				a
+					@apply text-Primary-1 shadow-Shadow-1 border-Primary-1
+	.pagination
+		@apply flex items-center justify-center
+		ul
+			@apply flex items-center justify-center gap-6
+			li
+				a, span
+					@apply inline-flex items-center justify-center
+					@apply rem:w-[52px] rem:h-[52px] 
+					@apply bg-Utility-gray-50
+					@apply font-normal
+					&.current
+						@apply bg-Primary-1 text-white
+				&.active
+					a, span
+						@apply bg-Primary-1 text-white
+				&:hover
+					a
+						@apply bg-Primary-1 text-white
+	.play-icon
+		@apply inline-flex items-center justify-center
+		@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+		@apply text-white bg-Primary-1
+		@apply sq-12 rounded-full
+	.project-item
+		@apply flex flex-col flex-1
+		.content
+			@apply flex flex-col flex-1
+	// .industrial-item
+	// 	@apply relative overflow-hidden
+	// 	.caption
+	// 		backdrop-filter: blur(6px)
+	// 		@apply absolute left-0 w-full bottom-0 flex flex-col justify-end items-start 
+	// 		@apply xl:py-12 xl:px-10 px-5 py-4
+	// 		@apply bg-black/20 rounded-b-5
+	// 		@apply transition-all duration-300 ease-in-out
+	// 		.title
+	// 			text-shadow: 0 0 25px rgba(0, 0, 0, 0.10)
+	// 			@apply heading-3 font-bold font-secondary text-white
+	// 		.desc
+	// 			text-shadow: 0 0 25px rgba(0, 0, 0, 0.10)
+	// 			@apply mb-4 text-white
+	// 		&::before, &::after
+	// 			content: ''
+	// 			backdrop-filter: blur(6px)
+	// 			@apply absolute inset-0 -z-1 pointer-events-none rounded-b-5
+	// 			@apply transition-opacity duration-300 ease-in-out
+	// 		&::before
+	// 			@apply bg-black/20 
+	// 		&::after
+	// 			background: linear-gradient(90deg, rgba(20, 89, 60, 0.75) 0%, rgba(209, 234, 142, 0.75) 100%)
+	// 	@screen xl
+	// 		.caption
+	// 			&::before
+	// 				@apply opacity-100
+	// 			&::after
+	// 				@apply opacity-0
+	// 		&:hover
+	// 			.caption
+	// 				@apply gap-4
+	// 				&::before
+	// 					@apply opacity-0
+	// 				&::after
+	// 					@apply opacity-100
+	// 			.toggle-hidden
+	// 				grid-template-rows: 1fr

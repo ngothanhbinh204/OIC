@@ -1,0 +1,55 @@
+section.service-detail-1(class="xl:rem:py-[128px] py-10 bg-Utility-gray-50")
+	.container 
+		.wrap-content(class="rem:max-w-[1088px] w-full mx-auto")
+			.title(class="xl:rem:text-[120px] rem:text-[64px] font-medium mb-base") Private Equity
+			.format-content(class="body-1 font-light")
+				p Katina Capital Partners combines deep transaction expertise with active ownership to transform promising businesses into market leaders. We don’t just allocate capital—we engineer lasting value. Our Private Equity practice partners with management teams to drive growth, improve operational efficiency, and position companies for successful exits. From deal origination to portfolio enhancement, we apply a safety‑first philosophy, rigorous governance, and the discipline of institutional investors.
+section.service-detail-2(tab-wrapper="parent" tab-mode="mouseenter")
+	.wrapper-main(class="xl:px-0 px-4")
+		-for(i=0;i<4;i++)
+			.item.media-item-wrapper(class="grid lg:grid-cols-2 grid-cols-1 xl:gap-0 gap-base")
+				.col-left(class="lg:block hidden")
+					.image-ratio(class="ratio:pt-[880_960] img-ratio")
+						-for(i=0;i<4;i++)
+							a(tab-content="parent" tab-content-value=`${i+1}`)
+								+PugImg(`https://picsum.photos/600/${400+i}`)
+				.col-right(class="flex flex-col justify-center xl:rem:pt-[93px] pt-10")
+					h2.block-title(class="heading-1 font-bold xl:rem:pl-[120px] xl:rem:mb-[56px] mb-base") Information
+					.wrap(class="flex flex-col xl:gap-0 gap-5")
+						-for(i=0;i<4;i++)
+							.item(tab-item="parent" tab-item-value=`${i+1}`)
+								a(class="" href="#")
+									.number 0#{i+1}
+									.caption
+										.title(class="heading-3 font-bold") Fundraising Readiness
+										.toggle-hidden 
+											div
+												.format-content(class="body-1 mt-5 text-white/75 font-light")
+													p We assess your corporate readiness for capital raising, benchmarking against best‑in‑class market standards. Our team prepares compelling marketing materials—teasers, information memoranda, business plans, and financial statements—to articulate a powerful fundraising story that resonates with the right investors.
+								.img(class="lg:hidden block") 
+									a(href="#" class="img-ratio ratio:pt-[760_880]") 
+										+PugImg(`https://picsum.photos/600/${400+i}`)
+section.service-detail-3(class="xl:py-24 py-10")
+	.container-fluid
+		+HeadingTitle("Other Services").text-Primary-1.mb-base
+		.swiper-column-auto(class="relative auto-3-column autoplay swiper-loop")
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<4;i++)
+						.swiper-slide
+							.service-item
+								.img
+									a(href="#" class="img-ratio ratio:pt-[287_512] zoom-img") 
+										+PugImg()
+								.content(class="pt-6")
+									h3.title(class="heading-3 font-semibold mb-5") 
+										a(href="#") Project-Based Advisory
+									.format-content(class="body-1 font-light text-justify")
+										ul 
+											li Fundraising Readiness
+											li Fundraising Readiness 
+									.wrap-btn 
+										+BtnPrimary({option:"style-default"})
+			.wrap-button-slide
+				.btn.btn-sw-1.btn-prev
+				.btn.btn-sw-1.btn-next

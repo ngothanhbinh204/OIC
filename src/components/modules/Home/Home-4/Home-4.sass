@@ -1,0 +1,93 @@
+.home-overview-section
+	@apply relative z-1 xl:min-h-[calc(1080/1920*100%)]
+	@apply transition-all ease-linear
+	@screen -xl
+		@apply py-10
+	.overview-cover-img
+		transition-duration: 150ms
+		transition-property: all
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
+		@apply hidden xl:block
+		@apply absolute inset-0 -z-1 pointer-events-none opacity-0
+		img
+			@apply w-full h-full object-cover
+			transition: opacity 0.3s ease-in-out
+			opacity: 0
+		&.active
+			@apply opacity-100
+			img
+				opacity: 1
+	.container-fluid
+		@apply flex flex-col justify-between gap-20 xl:pb-0 xl:rem:min-h-[700px]
+	.block-content
+		@apply rem:max-w-[450px] xl:rem:max-w-[880px]
+	@screen xl
+		.home-overview-list
+			@apply absolute bottom-0 left-0 w-full z-1
+.home-overview-list
+	@apply flex flex-wrap items-end xl:gap-0 gap-base
+	@screen -xl
+		@apply items-start
+	@screen -lg
+		@apply grid grid-cols-2
+	@screen -md
+		@apply grid-cols-1
+	> *
+		@apply w-full xl:w-[25%] lg:w-[30.74%] 
+	@screen xl
+		background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.60) 100%)
+		@apply pointer-events-none h-full
+		> *
+			@apply pointer-events-auto
+	.home-overview-item
+		@apply relative z-1 flex flex-col flex-1 gap-4 px-4 py-8 transition-all xl:px-5 xl:py-10
+		@apply overflow-hidden xl:justify-end
+		@apply border-r border-white/30 h-full
+		&::before
+			content: ''
+			@apply absolute inset-0 -z-1 pointer-events-none opacity-0
+			transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.60) 100%)
+			@screen -xl
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%)
+				@apply opacity-100
+		.caption
+			.toggle-hidden
+				>div
+					@screen -xl
+						@apply overflow-visible
+		.content-wrapper
+			@apply flex flex-col gap-4
+		.title
+			@apply title-32 font-bold text-white
+		.wrap-content
+			background: rgba(5, 1, 120, 0.50)
+			backdrop-filter: blur(10px)
+			@apply rounded-5 border border-white xl:p-5 p-3 text-white body-1
+		.desc
+			@apply body-1 font-medium text-white 
+		// .toggle-hidden
+		// 	@apply mt-6
+		&:last-child
+			.built
+				@apply opacity-0 pointer-events-none
+		@screen xl
+			background-image: none !important
+			@apply h-full
+			&:hover
+				&::before
+					@apply opacity-100
+				.toggle-hidden
+					grid-template-rows: 1fr
+					.wrap-content
+						@apply mt-5
+	@screen -xl
+		.home-overview-item
+			@apply border-transparent
+			.content-wrapper
+				.title
+					@apply mb-3
+			.home-overview-item-img
+				@apply mb-4 rem:h-[280px]
+				img
+					@apply w-full h-full object-cover rounded-3

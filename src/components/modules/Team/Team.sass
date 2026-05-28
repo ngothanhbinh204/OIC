@@ -1,0 +1,41 @@
+.team-2
+	.swiper-column-auto
+		.swiper-slide
+			--mr: calc(59/1920*100rem)
+			@screen -xl
+				--mr: calc(28/1920*100rem)
+			@screen -md
+				--mr: calc(16/1920*100rem)
+			@apply flex flex-col h-auto
+			.item
+				@apply flex flex-col flex-1
+				.img
+					background: linear-gradient(to bottom, #0D059E 0%, #0F0D32 100%)
+				.content
+					@apply flex flex-1 flex-col
+					.wrap-btn
+						@apply mt-auto
+[id^="popup-team"]
+	@apply xl:rem:w-[916px]  relative w-full p-0
+	.carousel__button 
+		position: absolute !important
+		top: 0.5rem !important
+		right: 0.5rem !important
+		@apply w-8 h-8 cursor-pointer  bg-transparent rounded-full z-[999]
+		svg
+			@apply sq-5 stroke-white
+	.popup-content
+		@apply relative bg-[#f6f6f6]
+		&::before
+			content: ""
+			@apply absolute top-0 left-0 w-full rem:h-[208px] bg-Primary-1 pointer-events-none -z-1
+		.wrapper
+			@screen -md
+				@apply grid-cols-[48.5%_1fr]
+			.img
+				background: linear-gradient(to bottom, #0E00FF 0%, #0F0D32 100%)
+		.wrap-content
+			@screen -md
+				@apply overflow-y-auto rem:h-[430px]
+			.format-content
+				@apply text-black

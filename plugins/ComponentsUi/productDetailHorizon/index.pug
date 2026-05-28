@@ -1,0 +1,54 @@
+section.product-detail-1(class="section-py")
+	.container-fluid
+		.product-detail-main(class="flex flex-col lg:flex-row xl:gap-16 gap-base")
+			.col-left(class="xl:rem:max-w-[606px] lg:w-2/4 w-full")
+				.wrapper(class="flex flex-col gap-5")
+					.main
+						.swiper
+							.swiper-wrapper
+								-for(i=0;i<6;i++)
+									.swiper-slide
+										.img(class="bg-[#EFEFEF]")
+											a(class="img-ratio rounded-5")
+												+PugImg("./img/product-detail.png") 
+					.thumb.relative
+						.relative(class="w-full flex items-center gap-6")
+							.btn.btn-sw-1.btn-prev
+							.swiper(class="w-full")
+								.swiper-wrapper(class="flex items-center")
+									-for(i=0;i<6;i++)
+										.swiper-slide
+											.img
+												a(class="img-ratio") 
+													+PugImg()
+							.btn.btn-sw-1.btn-next
+			.col-right(class="flex-1")
+				.wrap-info-top(class="pb-5 mb-5 border-b border-b-Utility-gray-100")
+					+HeadingTitle("NPK HÀN-VIỆT 16-16-8+13S").mb-2.text-Primary-1
+					.wrap-category(class="flex items-center gap-2 body-2 font-normal text-Utility-gray-900")
+						.category(class="border-r border-r-Utility-gray-900 pr-2") Hạt màu nâu, Bao 50kg
+						.code-product 
+							| Mã sản phẩm: 
+							span HV01A
+				.wrap-desc(class="pb-5 mb-5 border-b border-b-Utility-gray-100")
+					.label(class="body-2 font-bold text-Primary-1 mb-2") MÔ TẢ:
+					.format-content(class="mt-4 body-2 font-normal text-black")
+						ul 
+							li Phân bón hỗn hợp NPK
+							li Phân bón hỗn hợp NPK
+				.wrap-parameters(class="row") 
+					-for(i=0;i<5;i++)
+						.col-item(class="col-lg-4 col-6")
+							.item(class="bg-Utility-gray-50 py-5 px-6 rounded-5 grid xl:grid-cols-2 grid-cols-1 gap-3 items-center")
+								.title(class="body-1 font-normal") Đạm tổng số (Nts)
+								.number(class="xl:text-right text-Primary-1 heading-banner uppercase font-normal") 16% 
+				.button-contact(class="mt-base mb-base") 
+					+BtnPrimary({text: "Đăng ký tư vấn"})
+				.share(class="flex flex-col gap-3") 
+					.label(class="body-2 font-bold text-[#292929]") Chia sẻ:
+					.social 
+						ul 
+							-for(i=0;i<2;i++)
+								li
+									a(href="#") 
+										i.fa-brands.fa-facebook-f

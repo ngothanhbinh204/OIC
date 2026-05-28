@@ -1,0 +1,224 @@
+mixin subscribeForm()
+	.subscribe-form
+		form(action="") 
+			.form-group
+				input(type="email" placeholder="Nhập Email của bạn")
+				.btn-submit 
+					span Gửi 
+					.icon 
+						<i class="fa-solid fa-chevron-right"></i>
+mixin WrapButtonSlide()
+	.wrap-button-slide
+		.btn.btn-sw-1.btn-prev
+		.btn.btn-sw-1.btn-next
+mixin WrapShowContent()
+	.wrap-show-content
+		.show-content(class="")
+			p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae porro tempore tempora ut voluptates consectetur dolore earum ea. Labore optio quam quae a illo dolorem quaerat praesentium molestiae magnam quasi!
+		.btn-expand
+			span Xem thêm
+			.icon
+				<i class="fa-solid fa-chevron-down"></i>
+mixin BlockTitle(title="")
+	h2(class="block-title title heading-1 font-bold")=title
+mixin HeadingTitle(title="")
+	-var className = attributes.class
+	h2(class="heading-1 block-title font-bold " + className)=title
+mixin SelectOption()
+	.form-group 
+		select(name="service" id="service")
+			option(value="1") Dịch vụ 1
+			option(value="2") Dịch vụ 2
+			option(value="3") Dịch vụ 3
+mixin menuSpy()
+	section#menu-spy.section-scrollTo-active
+		ul 
+			li 
+				a(href="#about-1") Câu chuyện thương hiệu
+			li 
+				a(href="#about-2") Tầm nhìn - Sứ mệnh
+			li 
+				a(href="#about-3") Giá trị cốt lõi 
+			li 
+				a(href="#about-4") Lịch sử phát triển
+			li 
+				a(href="#about-5") Lĩnh vực hoạt động
+			li 
+				a(href="#about-6") Giải thưởng
+mixin SocialList()
+	ul.social-list
+		li 
+			a(href="") 
+				i.fa-brands.fa-facebook-f
+		li 
+			a(href="") 
+				i.fa-brands.fa-twitter
+mixin IndustrialParkItem()
+	.industrial-item
+		.image
+			a(href="#" class="img-ratio rounded-5") 
+				+PugImg()
+		.caption
+			h4.title Tan Tien Industrial Park 1 & 2 
+			.toggle-hidden
+				div
+					.desc
+						p Lorem ipsum dolor sit amet consectetur. Fames faucibus quam eu in. Viverra sed ullamcorper massa at.
+					.btn-view-more 
+						a(href="#" class="btn btn-primary") 
+							span SEE MORE
+							.icon 
+								img(src="./img/arrow.svg", alt="" class="img-svg")
+mixin PugImg(url="./img/1.jpg")
+	img(data-src=url, alt="", class="lozad " + attributes.class)
+mixin InputDate()
+	input(type="text" class="input-date" placeholder="Chọn ngày")
+mixin WrapItemHeight()
+	.item
+		.content(class="absolute bottom-0 left-0 w-full wrap-item-height z-10 p-6")
+			h3.title(class="text-Neutral-White title-32 mb-4 font-primary2") 
+				a(href="./activityDetail.html") Nguyên liệu thực phẩm
+			.desc(class="item-var-height")
+				.content-desc Cung cấp nguồn nguyên liệu thực phẩm chất lượng cao, từ nông sản Việt Nam tươi sạch đến các sản phẩm chế biến, đáp ứng tiêu chuẩn xuất khẩu quốc tế.
+mixin CountItem()
+	.item
+		.number.countup(data-number="12") 
+			span.count-value
+			span.suffix +
+		.title(class="body-1 font-normal") Năm kinh nghiệm
+mixin EmailForm()
+	.form-group.subscribe-group
+		input(type="email" placeholder="Nhập Email của bạn")
+		.btn-submit 
+			span Gửi 
+			.icon 
+				<i class="fa-solid fa-chevron-right"></i>
+mixin MenuTabslet()
+	.wrap-tabslet(data-toggle="tabslet")
+		ul.tabslet-tab
+			li.active
+				a(href="#") Thông tin sản phẩm
+			li
+				a(href="#") Ưu đãi và chiết khấu
+			li
+				a(href="#") Hướng dẫn sử dụng
+			li
+				a(href="#") Hướng dẫn bảo quản
+		.tabslet-content.active#tab1
+			h2(class="rem:text-[32px] font-bold text-Primary-1 mb-base text-center") Thông tin sản phẩm
+			.expand-content(class="overflow-hidden")
+				.format-content 
+					-for(var i = 0; i < 10; i ++)
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, similique non nostrum necessitatibus corrupti eaque esse cumque commodi aspernatur doloribus fugit, dignissimos provident suscipit! Dicta maxime perspiciatis odit iusto laboriosam.
+		.tabslet-content#tab2
+			h2(class="rem:text-[32px] font-bold text-Primary-1 mb-base text-center") Thông tin sản phẩm 2
+			.expand-content(class="overflow-hidden")
+				.format-content 
+					-for(var i = 0; i < 10; i ++)
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, similique non nostrum necessitatibus corrupti eaque esse cumque commodi aspernatur doloribus fugit, dignissimos provident suscipit! Dicta maxime perspiciatis odit iusto laboriosam.
+mixin HeaderLanguageVertical()
+	ul 
+		li.wpml-ls-item
+			a(href="") 
+				span.wpml-ls-native VN
+		ul 
+			li 
+				a(href="") 
+					span EN
+mixin HeaderLanguageHorizontal()
+	ul 
+		li.wpml-ls-item
+			a(href="") 
+				span.wpml-ls-native VN
+		li.wpml-ls-item
+			a(href="") 
+				span.wpml-ls-native VN
+mixin BtnPrimary(opts={})
+	- 
+		const {
+			text= "Explore More",
+			option= "style-default",
+			tag= "a",
+			href= "#",
+			icon= true
+		}=opts
+	#{tag}(href=tag === "a" ? href : null, class=["btn btn-primary", option, attributes.class])
+		span=text
+		if icon
+			span(class="material-symbols-outlined") arrow_right_alt
+		if block 
+			block
+
+mixin HeaderMenu()
+	.header-menu 
+		ul 
+			-var menu = ['Giới thiệu','Sản phẩm','Dự án', 'Dịch vụ','Thông tin','Tuyển dụng']
+			each item in menu
+				li.menu-item-has-children
+					a(href="")=item
+mixin Indicator()
+	.scroll(class="mt-base flex items-center gap-5")
+		.swiper-scrollbar
+		.indicator-swipe.active
+			img(src="./img/arrow-left.svg", alt="" class="arrow")
+			img(src="./img/Finger.png", alt="" class="hand")
+			img(src="./img/arrow-right.svg", alt="" class="arrow")
+mixin HeaderLanguage()
+	.header-language 
+		.header-language-active
+			ul 
+				li.wpml-ls-current-language
+					a(href="") 
+						.flag 
+							img(src="./img/flag.png", alt="")
+						span.wpml-ls-native VN
+				ul 
+					li 
+						a(href="") 
+							span EN
+		.header-language-list
+			ul 
+				li.wpml-ls-current-language
+					a(href="") 
+						span.wpml-ls-native VN
+				ul 
+					li 
+						a(href="") 
+							span EN
+mixin NewsItem(options = {})
+	//- +NewsItem({ratio:"ratio:pt-[400_600]"})
+	- const ratio = options.ratio || "ratio:pt-[293_440]"
+	.news-item(class="group")
+		.img 
+			a(href="./NewsDetail.html" class=`img-ratio ${ratio} rounded-4 zoom-img`) 
+				+PugImg()
+		.content(class="xl:py-6 xl:px-4 p-4")
+			.top-content(class="flex items-center gap-2 font-normal body-4")
+				.day 20.08.2025
+				.category(class="text-Primary-1") Tin công ty
+			h3(class="heading-6 font-semibold my-2 group-hover:text-Primary-1") 
+				a(href="#") Giá trị của suối khoáng nóng với sức khỏe con người là vô giá
+			.desc(class="line-clamp-2") 
+				p Nước muối iON MUỐI giúp sát khuẩn, kháng viêm, loại bỏ các vi khuẩn, mầm bệnh,…
+mixin ProjectItem()
+	.project-item(class="group") 
+		.img 
+			a(href="#" class="img-ratio ratio:pt-[247_440] zoom-img") 
+				+PugImg()
+		.content(class="bg-Utility-gray-50 p-4")
+			.sub-title(class="text-xs text-Primary-1-Subtitle font-normal mb-1") Gói thầu XL1
+			h3.title(class="heading-3 font-bold group-hover:text-Primary-1") 
+				a(href="#" class="line-clamp-2") XDCT đường bộ cao tốc Bắc - Nam phía Đông giai đoạn 2021-2025
+			.wrap-infos(class="flex flex-col gap-4 mt-4")
+				.item(class="flex gap-2")
+					.icon(class="w-6 h-4 inline-flex text-base text-Primary-1") 
+						<i class="fa-light fa-user"></i>
+					.content(class="body-4") 
+						.label(class="font-bold mb-1") Chủ đầu tư
+						.value(class="font-normal") Ban QLDA Đường Hồ Chí Minh
+				.item(class="flex gap-2")
+					.icon(class="w-6 h-4 inline-flex text-base text-Primary-1") 
+						<i class="fa-light fa-user"></i>
+					.content(class="body-4") 
+						.label(class="font-bold mb-1") Chủ đầu tư
+						.value(class="font-normal") Ban QLDA Đường Hồ Chí Minh

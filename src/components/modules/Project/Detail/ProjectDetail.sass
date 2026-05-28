@@ -1,0 +1,39 @@
+.project-detail-1
+	.wrap-content
+		.format-content
+			@apply body-1
+		.col-right
+			@apply h-fit
+	.wrap-slide
+		.swiper-main
+			@apply mb-6
+			.swiper-wrapper
+				.swiper-slide
+					.img
+						@apply bg-Primary-1 bg-opacity-[0.08]
+		.thumbs-wrapper
+			@apply  relative rem:px-[70px]
+			.swiper-thumbs
+				.swiper-wrapper
+					.swiper-slide
+						@apply border-2 border-transparent
+						.img
+							@apply bg-Primary-1 bg-opacity-[0.08]
+					.swiper-slide-thumb-active
+						@apply  border-Primary-1 transition-all duration-300
+			.wrap-button-slide
+				.btn
+					@apply absolute top-1/2 -translate-y-1/2 m-0 z-10
+					@screen -lg
+						@apply static flex mt-base
+					&.btn-prev
+						@apply left-0 right-auto
+					&.btn-next
+						@apply right-0 left-auto
+.project-detail-2
+	.swiper-column-auto
+		.swiper-slide
+			@apply flex flex-col h-auto
+			.project-item
+				.content
+					@apply bg-white						

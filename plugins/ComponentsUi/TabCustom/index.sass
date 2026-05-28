@@ -1,0 +1,15 @@
+.section-custom-tab
+	[tab-item]
+		@apply p-4 transition-all ease-in-out
+		&.active
+			@apply bg-Primary-1 text-Primary-1
+			@apply font-bold border-Primary-1
+			i
+				@apply opacity-100 delay-200
+			.img
+				a
+					@apply ratio:pt-[760_880] img-ratio
+		.img
+			a
+				@apply pt-0 transition-all duration-500
+				@apply rounded-b-4

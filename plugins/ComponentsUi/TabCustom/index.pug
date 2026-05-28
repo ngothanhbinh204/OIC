@@ -1,0 +1,19 @@
+section.section-custom-tab.home-item-animation(tab-wrapper="parent" tab-mode="mouseenter")
+	.container
+		.wrapper-main(class=" grid lg:grid-cols-2 grid-cols-1 gap-base")
+			.col-left
+				h2.block-title Danh mục sản phẩm
+				.wrap(class="flex flex-col gap-5")
+					-for(i=0;i<4;i++)
+						.item(tab-item="parent" tab-item-value=`${i+1}` class="p-4 bg-gray-500")
+							a(class="" href="/")
+								span=`0${i+1}. Bánh hộp thiếc`
+								<i class="fa-solid fa-circle-arrow-up-right"></i>					
+							.img(class="lg:hidden block") 
+								a(href="#" class="img-ratio ratio:pt-[760_880]") 
+									+PugImg()
+			.col-right(class="lg:block hidden")
+				.image-ratio(class="ratio:pt-[760_880] img-ratio h-full")
+					-for(i=0;i<4;i++)
+						a(tab-content="parent" tab-content-value=`${i+1}` class="absolute inset-0 bg-neutral-50")
+							+PugImg()

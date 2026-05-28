@@ -1,0 +1,164 @@
+section.product-detail-1(class="section-py")
+	.container
+		.product-detail-main(class="flex flex-col lg:flex-row xl:gap-16 gap-base")
+			.col-left(class="xl:rem:max-w-[805px] lg:w-2/4 w-full")
+				.wrapper(class="grid md:grid-cols-[calc(118/805*100%)_1fr] grid-cols-[calc(120/805*100%)_1fr] gap-[calc(20/805*100%)]")
+					.thumb.relative
+						.relative(class="w-full h-full")
+							.swiper
+								.swiper-wrapper
+									-for(i=0;i<6;i++)
+										.swiper-slide
+											.img
+												a(class="img-ratio") 
+													+PugImg()
+						.wrap-button-slide.arrow-vertical
+							.button-prev
+							.button-next
+					.main
+						.swiper
+							.swiper-wrapper
+								-for(i=0;i<6;i++)
+									.swiper-slide
+										.img
+											a(class="img-ratio rounded-4")
+												+PugImg() 
+			.col-right(class="flex-1")
+				h2(class="rem:text-[32px] font-bold mb-3") Ba Chỉ Bò Mỹ 500G
+				.code-product 
+					p 
+						| Mã sản phẩm: 
+						br
+						span 780USFE HL
+				.format-content(class="mt-4")
+					-for(i=0;i<3;i++)
+						p Ba chỉ bò mỹ (hay còn gọi là Ba rọi bò mỹ - Short Plate )  là phần thịt bụng của con bò, Được KIWIFOOD nhập khẩu trực tiếp Nguyên Container từ Mỹ về Việt Nam
+					.info-product
+						table 
+							-for(i=0;i<5;i++)
+								tr 
+									td Tình trạng:
+									td.parameter Còn hàng.
+				.filters 
+					.label Theo dung tích:
+					.value 
+						ul 							
+							li.active
+								span 500gr
+							li 
+								span 500gr
+							li 
+								span 500gr
+							li 
+								span 500gr
+							li 
+								span 500gr
+				.price-product 
+					.label Giá sản phẩm:
+					.price 
+						bdi 15.000.000đ
+				.wrap-bottom 
+					.button-contact(class="flex items-center gap-6 whitespace-nowrap")
+						a(href="#form-contact-product" class="btn btn-contact" data-fancybox) 
+							span Liên hệ để nhận tư vấn
+							.icon 
+								<i class="fa-regular fa-pen-to-square"></i>
+						a(href="#" class="btn btn-location") 
+							span Điểm bán gần bạn
+							.icon 
+								<i class="fa-regular fa-store"></i>
+					.commercial(class="flex gap-4") 	
+						.label Sàn thương mại:
+						.commercial-img(class="flex gap-2 flex-wrap")
+							-for(i=0;i<8;i++)
+								img(src="./img/bachhoaxanh.png", alt="")
+					.share(class="flex items-center gap-3") 
+						.label Share:
+						.social 
+							a(href="#") 
+								<i class="fa-brands fa-facebook-f"></i>
+section.product-detail-2
+	.wrapper-main(data-toggle="tabslet")
+		.wrap
+			.container
+				ul.tabslet-tab
+					li.active
+						a(href="#tab1") Thông tin sản phẩm
+					li
+						a(href="#tab2") Ưu đãi và chiết khấu 
+					li
+						a(href="#tab2") Hướng dẫn sử dụng
+					li
+						a(href="#tab2") Hướng dẫn bảo quản
+				
+		.wrap-content 
+			.container
+				.tabslet-content.active#tab1
+					h2(class="rem:text-[32px] font-bold mb-base text-center") Thông tin sản phẩm
+					.expand-content(class="overflow-hidden")
+						.format-content 
+							-for(var i = 0; i < 10; i ++)
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, similique non nostrum necessitatibus corrupti eaque esse cumque commodi aspernatur doloribus fugit, dignissimos provident suscipit! Dicta maxime perspiciatis odit iusto laboriosam.
+					.btn-view-more 
+						button 
+							span Xem thêm
+							.icon 
+								<i class="fa-regular fa-angle-down"></i>
+				.tabslet-content#tab2
+					h2(class="rem:text-[32px] font-bold mb-base text-center") Thông tin sản phẩm 2
+					.expand-content(class="overflow-hidden")
+						.format-content 
+							-for(var i = 0; i < 10; i ++)
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, similique non nostrum necessitatibus corrupti eaque esse cumque commodi aspernatur doloribus fugit, dignissimos provident suscipit! Dicta maxime perspiciatis odit iusto laboriosam.
+					.btn-view-more 
+						button 
+							span Xem thêm
+							.icon 
+								<i class="fa-regular fa-angle-down"></i>
+section.product-detail-3(class="section-py")
+	.container 
+		h2(class="heading-4 text-center  mb-base") Sản phẩm gợi ý
+		.swiper-column-auto(class="relative autoplay swiper-loop")
+			.swiper 
+				.swiper-wrapper
+					-for(var i = 0; i < 6; i++) 
+						.swiper-slide 
+							+ProductItem() 
+			.wrap-button-slide
+				.btn.btn-sw-1.btn-prev
+				.btn.btn-sw-1.btn-next
+section.product-detail-4(class="section-py bg-Utility-gray-50")
+	.container 
+		h2(class="heading-4 text-center mb-base") Sản phẩm liên quan
+		.swiper-column-auto(class="relative autoplay swiper-loop")
+			.swiper 
+				.swiper-wrapper
+					-for(var i = 0; i < 6; i++) 
+						.swiper-slide 
+							+ProductItem() 
+			.wrap-button-slide
+				.btn.btn-sw-1.btn-prev
+				.btn.btn-sw-1.btn-next
+#form-contact-product(style="display: none;" data-fancybox-modal)
+	.popup-content(class="w-full relative z-50")
+		.heading(class="text-center mb-6")
+			h2(class="heading-1 font-bold mb-4") Ba Chỉ Bò Mỹ 500G
+			.desc 
+				p Vui lòng điền thông tin vào form dưới đây để nhận tư vấn nhanh chóng. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất để hỗ trợ giải đáp thắc mắc.
+		form.wpcf7-form(action="")
+			.wrap-form(class="grid md:grid-cols-2 gap-4 mb-5") 
+				.form-group
+					input(type="text" name="ho-va-ten" placeholder="Họ và tên")
+				.form-group
+					input(type="email" name="email" placeholder="Số điện thoại")
+				.form-group
+					input(type="tel" name="so-dien-thoai" placeholder="Email")
+				.form-group
+					input(type="text" name="noi-dung" placeholder="Tiêu đề")
+				.form-group.textarea(class="w-full") 
+					textarea(name="Noi dung") Nội dung
+				.form-submit
+					button(class="btn btn-primary")
+						span Gửi ngay
+						.icon
+							<i class="fa-solid fa-arrow-right"></i>

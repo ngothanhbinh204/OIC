@@ -1,0 +1,40 @@
+section.contact(class="section-py")
+	.container 
+		.contact-main(class="flex flex-col lg:flex-row xl:gap-20 gap-base")
+			.col-left(class="lg:rem:w-[680px] w-full")
+				.title(class="heading-2 font-extrabold mb-2") GỬI LỜI NHẮN
+				.sub-title(class="mb-5") Nếu Quý khách hàng có yêu cầu, thắc mắc. Vui lòng liên hệ với chúng tôi.
+				form(action="" class="my-8")
+					.wrap-form(class="grid grid-cols-2 gap-5")
+						.form-group 
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group 
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group 
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group 
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group.textarea(class="w-full col-span-full") 
+							textarea(name="message" placeholder="Nội dung")
+					.form-submit(class="mt-5 flex-center")
+						button(class="btn btn-primary") 
+							span Gửi ngay
+							.icon 
+								<i class="fa-solid fa-arrow-right"></i>
+				
+			.col-right(class="flex-1 lg:p-12 p-5 bg-Utility-50 w-full")
+				h2(class="heading-2 text-Primary-1 font-extrabold mb-base uppercase") CÔNG TY CỔ PHẦN TẬP ĐOÀN DREAM LANDS
+				.contact-box(class="") 
+					.contact-list(class="flex flex-col gap-5") 
+						-for(var i = 0; i < 3; i++)
+							.contact-item
+								span(class="text-xl text-Primary-2") 
+									i.fa-solid.fa-location-dot
+								.contact-wrap(class="flex flex-col gap-2")
+									ul 
+										li 
+											p  
+												a(href="#") Văn phòng chính: Vinhomes Westpoint W1 Địa chỉ: 2Q6P+M93, Mễ Trì, Nam Từ Liêm, Hà Nội
+		.map-wrap 
+			.map 
+				iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1860899485405!2d106.66242087596952!3d10.797055089353039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175292e045f31ed%3A0xcc1f3cde54c86d27!2zMzE2IEzDqiBWxINuIFPhu7ksIFBoxrDhu51uZyAxLCBUw6JuIELDrG5oLCBI4buTIENow60gTWluaCA3MDA5MDAsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1743336128299!5m2!1svi!2s", width="800", height="600", style="border:0;", allowfullscreen, loading="lazy", referrerpolicy="no-referrer-when-downgrade")

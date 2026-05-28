@@ -1,0 +1,107 @@
+section.recruit-banner.bg-Primary-1.relative.overflow-hidden(class="xl:py-15 py-10")
+	h2.heading-3.italic.text-white.text-center Cùng DACINCO chinh phục những dự án tầm cỡ
+section.recruit-1.relative.overflow-hidden
+	.container-fluid.bg-grey-50
+		.row 
+			.col.w-full(class='lg:w-1/2')
+				.img
+					a(class="img-ratio ratio:pt-[610_960]")
+						+PugImg()
+			.col.w-full(class='lg:w-1/2')
+				.txt(class='px-4 flex flex-col justify-center xl:pl-20 rem:lg:max-w-[760px] rem:xl:max-w-[790px] rem:2xl:max-w-[700px] h-full col-left')
+					h2.heading-1.mb-base.text-Primary-1 Môi trường làm việc 
+					.scrollbar-wrap
+						.format-content(class="space-y-4")
+							h5 “Con người là chìa khóa của thành công”
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	.container-fluid.bg-grey-50
+		.row 
+			.col.w-full(class='lg:w-1/2')
+				.img
+					a(class="img-ratio ratio:pt-[610_960] zoom-img")
+						+PugImg()
+			.col.w-full(class='lg:w-1/2')
+				.txt(class='px-4 flex flex-col justify-center xl:pl-20  rem:lg:max-w-[760px] rem:xl:max-w-[790px] rem:2xl:max-w-[700px] h-full col-left')
+					h2.heading-1.mb-10.text-Primary-1 Môi trường làm việc 
+					.scrollbar-wrap
+						.fullcontent
+							h5 “Con người là chìa khóa của thành công”
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+section.recruit-2.relative.overflow-hidden.section-py
+	.container
+		h2.title(class="heading-36 font-extrabold mb-base text-Primary-1 text-center") ĐÀO TẠO VÀ PHÁT TRIỂN NHÂN SỰ
+		.swiper-column-auto(class="relative auto-3-column swiper-loop autoplay")
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<4;i++)
+						.swiper-slide
+							.item
+								.img(class="img-ratio ratio:pt-[248_440] zoom-img")
+									+PugImg()
+								.content(class="xl:py-10 xl:px-10 p-4 bg-Utility-gray-50 text-center")
+									.title(class="heading-3 font-bold rem:mb-[26px] text-Primary-1") CHẾ ĐỘ ĐÃI NGỘ VÀ CHÍNH SÁCH PHÚC LỢI
+									.desc(class="line-clamp-3 rem:mb-[26px]") 
+										p Chúng tôi muốn CBNV cùng đồng hành và phát triển cùng VictoryCons, do đó chúng tôi có nhiều chế độ đãi ngộ, chính sách phúc lợi tốt và chính sách lương thưởng linh hoạt, cạnh tranh với thị trường. Song song đó chúng tôi không ngừng cải thiện, bổ sung thêm các chính sách và phúc lợi mới ngày một tốt hơn để VictoryCons sẽ là mái nhà thứ hai của mỗi CBNV. 
+									.wrap-btn 
+										a(href="#" data-read-less="Thu gọn" aria-expanded="false") 
+											span Xem thêm
+											.icon 
+												<i class="fa-light fa-angle-down"></i>
+		
+section.recruit-list(class="section-py bg-Utility-gray-50")
+	.container
+		.wrap-heading(class="text-center mb-base")
+			h2(class="heading-36 font-extrabold mb-3 text-Primary-1 text-center") Danh sách vị trí đang tuyển dụng
+			.sub-title Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		.filter-table-wrap
+			.table-wrap
+				table
+					thead
+						tr
+							th STT
+							th VỊ TRÍ ỨNG TUYỂN 
+							th KHU VỰC
+							th HẠN NỘP HỒ SƠ
+							th
+					tbody
+						-for(i=1;i<5;i++)
+							tr
+								td(data-attr='STT ') 01
+								td(data-attr='Vị trí ')
+									a.title giáo viên tiểu học 
+								td(data-attr='NƠI LÀM VIỆC') Tp.HCM
+								td(data-attr='hạn nộp hồ sơ') 16.09.2024
+								td
+									.flex-center.btn-wrap 
+										a.btn.btn-tertiary
+											em.fa-light.fa-eye
+											span Xem chi tiết
+							tr
+								td(data-attr='STT ') 01
+								td(data-attr='Vị trí ')
+									a.title giáo viên 
+								td(data-attr='NƠI LÀM VIỆC') Tp.HCM
+								td(data-attr='hạn nộp hồ sơ') 16.09.2024
+								td
+									.flex-center.btn-wrap 
+										a.btn.btn-tertiary
+											em.fa-light.fa-eye
+											span Xem chi tiết
+							tr
+								td(data-attr='STT ') 01
+								td(data-attr='Vị trí ')
+									a.title giáo viên tiểu học 
+								td(data-attr='NƠI LÀM VIỆC') Tp.HCM
+								td(data-attr='hạn nộp hồ sơ') 16.09.2024
+								td
+									.flex-center.btn-wrap 
+										a.btn.btn-tertiary
+											em.fa-light.fa-eye
+											span Xem chi tiết
+											
+			.ajax-btn-wrap.mx-auto.w-fit.pt-9
+				a.btn.btn-primary.style-default
+					span Xem thêm
+					em.fa-regular.fa-chevron-down

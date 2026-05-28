@@ -1,0 +1,41 @@
+section.home-7(class="section-py bg-Utility-gray-50")
+	.decor  
+		+PugImg("./img/decor-form.png")
+	.container-fluid
+		.wrapper-main(class="grid xl:grid-cols-[calc(600/1600*100%)_1fr] grid-cols-1 xl:rem:gap-[160px] gap-base")
+			.col-left(data-aos="fade-right" data-aos-delay="200" data-aos-duration="700")
+				+HeadingTitle("Contact Form").text-Primary-1.mb-5
+				.format-content.desc(class="body-1 font-light")
+					p We Value Every Question and Need You Have!Contact us today and we will provide you with professional assistance.
+			.col-right(data-aos="fade-left" data-aos-delay="400" data-aos-duration="700")
+				form(action="")
+					.wrap-form(class="grid grid-cols-1 gap-5 text-Primary-1")
+						.form-group 
+							.label Name*
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group 
+							.label Title*
+							select(name="service" id="service")
+								option(value="1") Dịch vụ 1
+								option(value="2") Dịch vụ 2
+								option(value="3") Dịch vụ 3
+						.form-group 
+							.label Mobile*
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group 
+							.label Email*
+							input(type="text" name="name" placeholder="Họ và tên")
+						.form-group 
+							.label Subject*
+							select(name="service" id="service")
+								option(value="1") Dịch vụ 1
+								option(value="2") Dịch vụ 2
+								option(value="3") Dịch vụ 3
+						.form-group.textarea(class="w-full col-span-full") 
+							.label Message*
+							textarea(name="message" placeholder="Nội dung")
+					.form-submit(class="mt-5")
+						button(class="btn btn-primary style-default") 
+							span Send
+							.icon 
+		

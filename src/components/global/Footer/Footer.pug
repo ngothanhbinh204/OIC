@@ -1,0 +1,70 @@
+footer.footer(class="xl:pt-15 xl:pb-20 py-10")
+	.color 
+		img(src="./img/color-bg.png", alt="")
+	.container-fluid 
+		.footer-top
+			.footer-wrapper(class="grid lg:grid-cols-2 grid-cols-1 xl:rem:gap-[438px] gap-base")
+				.col-left(class="flex flex-col justify-between")
+					.footer-logo 
+						a(href="#" class="img-ratio ratio:pt-[126_239]") 
+							+PugImg("./img/logo-footer.png")
+					.wrap-content
+						.footer-social 
+							ul 
+								-for(var i = 0; i < 3; i ++)
+									li 
+										a(href="#") 
+											.icon 
+												i.fa-brands.fa-linkedin
+											span linkedin 
+						.footer-bottom(class="body-4")
+							.text(class="body-4 font-normal text-black/80 mb-4") © Katina Capital Partners. All Rights Reserved. Website designed by CanhCam.
+							ul 
+								li 
+									a(href="#") Term of use
+								li 
+									a(href="#") Privacy policy
+				.col-right 
+					.footer-menu 
+						ul 
+							-for(var i = 0; i < 6; i ++)
+								li 
+									a(href="#") services
+					.nav-contact(class="flex flex-col gap-2 body-1")
+						.item 
+							p 
+								a(href="#") (+84) 28 38275080
+						.item 
+							p 
+								a(href="#") Address: Floor 46, Bitexco Financial Tower, No. 2 Hai Trieu, Sai Gon Ward, Ho Chi Minh City, Vietnam
+						.item 
+							p 
+								a(href="#") Fax (+84) 28 38288080
+						.item 
+							p 
+								a(href="#") info@katinacapital.com
+
+	.tool-fixed-cta
+		.btn.button-to-top
+			.btn-icon
+				.icon 
+		a.btn.btn-content(class="bg-Primary-1")
+			.btn-icon
+				.icon
+					i.fa-light.fa-phone
+			.content 1900 2273 – (028) 7100 0001
+		.btn.btn-content.btn-social
+			.btn-icon
+				.icon
+					i.fa-light.fa-messages
+			.content
+				ul 
+					li 
+						a(href="") 
+							i.fa-light.fa-envelope
+					li 
+						a(href="") 
+							i.fa-light.fa-phone
+					li 
+						a(href="") 
+							i.fa-light.fa-phone

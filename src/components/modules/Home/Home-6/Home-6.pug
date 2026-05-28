@@ -1,0 +1,52 @@
+section.home-6(class="section-py !pt-0" tab-wrapper="parent" tab-mode="mouseenter")
+	.container-fluid
+		.wrap-tabslet(data-toggle="tabslet")
+			.wrap-heading(class="flex md:flex-row gap-base flex-col items-center justify-between")
+				+HeadingTitle("Media").text-Primary-1
+				ul.tabslet-tab.nav-primary
+					li.active
+						a(href="#tab1") All news
+					li
+						a(href="#tab2") News
+					li
+						a(href="#") Insights
+					li
+						a(href="#") Thought Leadership
+			.tabslet-content.active#tab1
+				.wrapper-main(data-media-list)
+					-for(i=0;i<4;i++)
+						.item.media-item-wrapper(tab-item="parent" tab-item-value=`${i+1}` class="grid lg:grid-cols-[calc(1240/1600*100%)_1fr] grid-cols-1 gap-base")
+							.wrap-content(class="grid items-center xl:grid-cols-[calc(205/1240*100%)_1fr] grid-cols-1 xl:rem:gap-[115px]")
+								.month Feb.06
+								.infos 
+									h3.title(class="heading-3 font-semibold mb-5") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+									.format-content(class="body-1 font-light text-Utility-gray-600 mb-5") 
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ...
+									.icon(class="text-xl")
+										i.fa-solid.fa-plus
+							.wrap-image 
+								a(href="#" class="img-ratio rounded-2 ratio:pt-[240_320]" tab-content="parent" tab-content-value=`${i+1}`)  
+									+PugImg()
+				.button-more(data-load-more-media class="rem:mt-[31px] xl:rem:ml-[320px]") 
+					button(class="btn btn-primary style-default")
+						span Show More
+						.icon
+			.tabslet-content#tab2
+				.wrapper-main(data-media-list)
+					-for(i=0;i<4;i++)
+						.item.media-item-wrapper(tab-item="parent" tab-item-value=`${i+1}` class="grid lg:grid-cols-[calc(1240/1600*100%)_1fr] grid-cols-1 gap-base")
+							.wrap-content(class="grid items-center grid-cols-[calc(205/1240*100%)_1fr] xl:rem:gap-[115px]")
+								.month Feb.0699
+								.infos 
+									h3.title(class="heading-3 font-semibold mb-5") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+									.format-content(class="body-1 font-light text-Utility-gray-600 mb-5") 
+										p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown ...
+									.icon(class="text-xl")
+										i.fa-solid.fa-plus
+							.wrap-image 
+								a(href="#" class="img-ratio rounded-2 ratio:pt-[240_320]" tab-content="parent" tab-content-value=`${i+1}`)  
+									+PugImg()
+				.button-more(data-load-more-media class="rem:mt-[31px] xl:rem:ml-[320px]") 
+					button(class="btn btn-primary style-default")
+						span Show More
+						.icon

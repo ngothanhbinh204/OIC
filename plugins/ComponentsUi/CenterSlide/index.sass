@@ -1,0 +1,48 @@
+.section-home-project
+	background-image: unset !important
+	@apply bg-Neutral-White
+	.swiper
+		--spv: 1.1
+		@screen md
+			--spv: 1.4
+		@screen xl
+			--spv: 1.5
+		.swiper-slide
+			.item-image
+				@apply overflow-hidden
+			img
+				mix-blend-mode: luminosity
+				@apply opacity-10 transition-300
+			.content-wrap
+				.ctn
+					@apply title-20
+				@screen -md
+					@apply flex flex-col gap-[15px] p-[15px] bg-white
+				@screen md
+					@apply transition-300 -translate-x-[120%] duration-500
+					@apply transition-ease-out-quart
+					@apply absolute lg:bottom-6 lg:left-6 bottom-[15px] left-[15px] bg-white p-6 flex flex-col gap-6 max-w-[70%] lg:rem:max-w-[468px] box-content
+				a.btn-arrow
+					@screen -md
+						@apply hidden
+			&.swiper-slide-active
+				.item-image
+					img
+						@apply opacity-100
+				.content-wrap
+					@apply md:-translate-x-0 md:delay-300
+	.swiper-column-auto
+		@apply relative
+	.wrap-button-slide-custom
+		@apply flex-center gap-5
+		@screen xl
+			@apply absolute top-[35%] md:top-1/2 left-1/2 -translate-y-1/2 flex items-center justify-between
+			@apply -translate-x-[50%] xl:-translate-x-[51.7%] w-full z-10
+			@apply max-w-[var(--width-slide-active)]
+		@screen xl
+			@apply xl:rem:max-w-[1225px]
+			.btn-prev
+				@apply -translate-x-[calc(100%+1.0416666667rem)]
+			.btn-next
+				@apply translate-x-[calc(100%+1.0416666667rem)]
+

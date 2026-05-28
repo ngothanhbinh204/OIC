@@ -1,0 +1,47 @@
+section.project-detail-1(class="section-py")
+	.container 
+		.wrap-heading(class="mb-6")
+			.sub-title(class="text-Primary-1-Subtitle mb-6") Gói thầu XL8: Xây lắp và khảo sát, thiết kế BVTC đoạn Km69+000 - Km78+000
+			h2.title(class="heading-36 font-extrabold text-Primary-1") DATP đoạn Cam Lộ - La Sơn thuộc Dự án Xây dựng một số đoạn đường bộ cao tốc trên tuyến Bắc - Nam phía Đông giai đoạn 2017 – 2020
+		.wrap-slide
+			.swiper.swiper-main
+				.swiper-wrapper
+					-const arrImg = [{img:"./img/1.jpg"},{img:"https://picsum.photos/600/400"},{img:"https://picsum.photos/600/400"},{img:"https://picsum.photos/600/400"},{img:"https://picsum.photos/600/400"},{img:"https://picsum.photos/600/400"}]
+					each img in arrImg
+						.swiper-slide
+							a(href=img.img class = "img img-ratio ratio:pt-[786_1400] -lg:ratio:pt-[70%] zoom-img" data-fancybox="gallery")
+								+PugImg(img.img)
+			.thumbs-wrapper.relative
+				.swiper.swiper-thumbs
+					.swiper-wrapper
+						-const arrImgThumb = [{imgThumb:"https://picsum.photos/600/400"},{imgThumb:"https://picsum.photos/600/400"},{imgThumb:"https://picsum.photos/600/400"},{imgThumb:"https://picsum.photos/600/400"},{imgThumb:"https://picsum.photos/600/400"},{imgThumb:"https://picsum.photos/600/400"}]
+						each img in arrImgThumb
+							.swiper-slide
+								.img(class = "img-ratio ratio:pt-[125_190]" )
+									+PugImg(img.imgThumb)
+				.wrap-button-slide
+					.btn.btn-prev.btn-sw-1
+					.btn.btn-next.btn-sw-1
+		.wrap-content(class="grid grid-cols-12 gap-base xl:mt-16 mt-base")
+			.col-left(class="lg:col-span-8 col-span-full")
+				.format-content(class="font-normal space-y-3 text-[#3D3D3D]")
+					p Cảng Liên Chiểu là một trong những dự án hạ tầng giao thông trọng điểm của thành phố Đà Nẵng và khu vực miền Trung Việt Nam, với mục tiêu trở thành cảng cửa ngõ quốc tế tầm cỡ, đón đầu sự phát triển kinh tế và logistic trong khu vực. Dự án xây dựng bến cảng Liên Chiểu tập trung vào phần cơ sở hạ tầng dùng chung, có tổng mức đầu tư hơn 3.426 tỷ đồng, đánh dấu bước tiến quan trọng trong việc hiện đại hóa hệ thống cảng biển tại miền Trung.
+			.col-right(class="lg:col-span-4 col-span-full bg-Primary-1 text-white xl:p-10 p-4") 
+				.title(class="heading-3 font-bold mb-8") Tổng quan dự án
+				.infos(class="flex flex-col gap-5")
+					-for(i=0;i<4;i++)
+						.item(class="border-b border-b-white/20 pb-5 last:pb-0 last:border-transparent")
+							.label(class="font-normal mb-2") Chủ đầu tư:
+							.value(class="font-bold") Ban QLDA Đường Hồ Chí Minh
+section.project-detail-2(class="section-py bg-Utility-gray-50")
+	.container 
+		h2.title(class="heading-36 font-extrabold text-Primary-1 text-center mb-base") Dự án liên quan
+		.swiper-column-auto(class="relative auto-3-column swiper-loop autoplay")
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<6;i++)
+						.swiper-slide
+							+ProjectItem()
+			.wrap-button-slide
+				.btn.btn-sw-1.btn-prev
+				.btn.btn-sw-1.btn-next

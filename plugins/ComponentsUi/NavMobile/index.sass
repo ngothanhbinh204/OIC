@@ -1,0 +1,83 @@
+.nav-mobile
+	height: 100dvh
+	top: 0
+	backdrop-filter: blur(5px)
+	@apply flex flex-col items-center w-full
+	opacity: 0
+	pointer-events: none
+	transition: opacity 0.8s ease-in-out 0s, pointer-events 0s 1.2s
+	&::before
+		content: ''
+		@apply absolute bg-Primary-1
+		border-radius: 50%
+		width: 100px
+		height: 100px
+		top: -4rem
+		right: 2rem
+		transform: translate(50%, -50%) scale(0)
+		transition: transform 1.5s cubic-bezier(0.53,-0.20,0.20,1.16)
+		z-index: -1
+	.decor-1
+		@apply absolute top-0 right-0 md:rem:w-[478px] md:rem:h-[478px] rem:w-[180px] rem:h-[180px] pointer-events-none
+		will-change: transform, opacity
+		transform: translateZ(0)
+		backface-visibility: hidden
+		img
+			@apply w-full h-full object-contain
+	.decor-2
+		@apply absolute md:bottom-15 md:left-10 left-5 bottom-5 md:rem:w-[162px] md:rem:h-[162px] rem:w-[100px] rem:h-[100px] pointer-events-none
+		will-change: transform, opacity
+		transform: translateZ(0)
+		backface-visibility: hidden
+		img
+			@apply w-full h-full object-contain
+	.nav-wrapper
+		@apply flex flex-col h-full relative mt-[var(--header-height)] pb-10
+		.nav-wrapper-inner
+			@apply h-full
+			@screen -md
+				@apply mt-8
+			nav ul li
+				will-change: transform, opacity
+				transform: translateZ(0)
+				backface-visibility: hidden
+				-webkit-font-smoothing: antialiased
+			.nav-social ul li
+				will-change: transform, opacity
+				transform: translateZ(0)
+				backface-visibility: hidden
+			nav
+				>ul
+					@apply flex flex-col gap-7 items-center 
+					>li
+						>a
+							+hover-underline(95%, #fff)
+							@apply text-white md:rem:text-[36px] rem:text-[26px] font-bold uppercase font-secondary text-center	
+			.nav-social
+				@apply overflow-hidden
+				ul
+					@apply flex items-center justify-center rem:gap-[10px]	
+					li
+						a
+							@apply sq-10 inline-flex items-center justify-center rounded-full bg-white/30 text-white hover:bg-Primary-1
+body.isOpenMenu
+	.header
+		background: transparent
+		backdrop-filter: blur(0px)
+		.header-wrapper
+			.header-logo
+				img.logo-active
+					@apply block
+				img.logo-default
+					@apply hidden
+			.header-right
+				.header-bar
+					@apply bg-Primary-3
+					i
+						@apply text-Primary-1
+	.nav-mobile
+		opacity: 1
+		pointer-events: auto
+		transition: opacity 0.3s ease-in-out 0s, pointer-events 0s 0s
+		&::before
+			transform: translate(50%, -50%) scale(45)

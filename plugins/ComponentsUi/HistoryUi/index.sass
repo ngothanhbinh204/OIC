@@ -1,0 +1,119 @@
+.section-history
+	.thumb
+		@apply overflow-hidden relative
+		.swiper
+			@apply w-[120px] sm:w-[150px] md:rem:w-[300px] overflow-visible
+		.wrap-slide-years
+			@apply relative
+			&::before
+				content: ''
+				@apply absolute rem:top-[14px]  -translate-y-1/2 left-0 w-full h-[1px] bg-orange-500
+			.swiper-slide	
+				.item-history
+					@apply gap-2
+				.content
+					.number
+						@apply text-xl font-semibold text-red-50
+				.line-year
+					.circle
+						@apply bg-white border border-transparent rem:w-[28px] rem:h-[28px]
+						@apply flex items-center justify-center cursor-pointer transition-all ease-in-out
+						.dot
+							@apply bg-red-50 w-[16px] h-[16px] rounded-full 
+				&.swiper-slide-next
+					.wrap-content
+						.title-48
+							@apply text-Primary-1
+					.content
+						.line-year
+							.dot
+								@apply bg-Primary-3
+			.swiper-slide-thumb-active
+				.content
+					.number
+						@apply text-Primary-3 font-bold
+				.line-year
+					.circle
+						@apply bg-white border-orange-100
+						.dot
+							@apply bg-red-50
+	.main
+		.swiper
+			@apply -m-3 mb-5
+			.swiper-slide
+				@apply p-3
+				.box
+					@apply shadow-Shadow-1
+				.item
+					@apply items-center
+					.col-right
+						.format-content
+							ul
+								@apply gap-6
+							h3
+								@apply body-2
+
+// ================================================ ui 2
+// .section-history
+// 	background: linear-gradient(180deg, rgba(220, 245, 203, 0.00) 26.27%, #DBF1BF 100%)
+// 	.thumb
+// 		@apply overflow-hidden relative
+// 		.swiper
+// 			@apply w-[120px] sm:w-[150px] md:rem:w-[240px] overflow-visible
+// 		.wrap-slide-years
+// 			@apply relative
+// 			&::before
+// 				content: ''
+// 				@apply absolute rem:top-[18px]  -translate-y-1/2 left-0 w-full h-[1px] bg-Utility-gray-200
+// 			.swiper-slide	
+// 				.item-history
+// 					@apply gap-2
+// 				.content
+// 					.number
+// 						@apply heading-4 font-bold text-Utility-gray-300
+// 						@apply transition-all ease-in-out duration-300
+// 				.line-year
+// 					.circle
+// 						@apply bg-white border border-transparent rem:w-[36px] rem:h-[36px]
+// 						@apply flex items-center justify-center cursor-pointer transition-all ease-in-out
+// 						.dot
+// 							@apply bg-Utility-gray-200 sq-5 rounded-full 
+// 				&.swiper-slide-next
+// 					.wrap-content
+// 						.title-48
+// 							@apply text-Primary-1
+// 					.content
+// 						.line-year
+// 							.dot
+// 								@apply bg-Primary-3
+// 			.swiper-slide-thumb-active
+// 				.content
+// 					.number
+// 						@apply text-Primary-1 heading-3
+// 				.line-year
+// 					.circle
+// 						@apply bg-white border-Primary-2
+// 						.dot
+// 							@apply bg-Primary-1
+// 	.main
+// 		.wrapper-main
+// 			@apply overflow-hidden
+// 			.wrap-button-slide
+// 				.btn-prev
+// 					@apply xl:top-[42%] xl:left-[15rem] #{!important}
+// 				.btn-next
+// 					@apply xl:top-[42%] xl:left-[77.5%] #{!important}
+// 		.swiper
+// 			@apply w-full overflow-visible
+// 			.swiper-slide
+// 				@apply rem:w-[280px] sm:rem:w-[480px] md:rem:w-[780px]
+// 				@apply overflow-hidden opacity-20 mix-blend-multiply 
+// 				@apply transition-opacity duration-300 ease-in-out
+// 				.item
+// 					.content
+// 						@apply opacity-0 transition-opacity duration-300 ease-in-out pointer-events-none
+// 			.swiper-slide-active
+// 				@apply opacity-100 mix-blend-normal 
+// 				.item
+// 					.content
+// 						@apply opacity-100 pointer-events-auto

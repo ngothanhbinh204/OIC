@@ -1,0 +1,23 @@
+.home-2
+	.wrapper-main
+		.col-left
+			.format-content
+				strong
+					@apply font-medium
+			.wrap-list
+				.item
+					@apply xl:border-r xl:border-r-Utility-gray-200 flex-1 last:border-r-0
+					@apply px-5 pr-5 last:pr-0 w-max
+					&:first-child
+						@apply pl-0
+					&:last-child
+						@screen -xl
+							@apply pl-0
+					.number
+						line-height: calc(72/60)
+						@apply uppercase text-Primary-1 font-semibold heading-60 tabular-nums mb-5
+						@screen -md
+							@apply rem:min-w-[136px]
+					.title
+						@apply body-1 font-light xl:w-max
+					

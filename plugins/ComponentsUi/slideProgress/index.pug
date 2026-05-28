@@ -1,0 +1,26 @@
+section.section-slide-progress(class="section-py relative !pt-0")
+	.text-linear(data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200")
+		h2 WHO WE ARE
+	.container 
+		.heading(class="mb-12")
+			.wrap-title 
+				.title(data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200") Chúng tôi là ai?
+				h2(class="heading-48" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400") Đầu tư vào phát triển hạ tầng xã hội, hạ tầng đô thị và các lĩnh vực ưu tiên phát triển kinh tế - xã hội của Thành phố Hồ Chí Minh
+		.slide(class="relative" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600") 
+			.swiper 
+				.swiper-wrapper
+					-for(var i = 0; i < 8; i++) 
+						.swiper-slide 
+							.item
+								.img(class="img-ratio ratio:pt-[485_341] zoom-img") 
+									+PugImg()
+								.content(class="text-center") 
+									.title(class="title-24 text-white font-bold") 
+										a(href="./ActivityList.html") Huy động vốn
+								a(href="#" class="stretched-link") 
+			.scroll(class="mt-base flex items-center gap-5")
+				.swiper-scrollbar
+				.indicator-swipe.active
+					img(src="./img/arrow-left.svg", alt="" class="arrow")
+					img(src="./img/Finger.png", alt="" class="hand")
+					img(src="./img/arrow-right.svg", alt="" class="arrow")

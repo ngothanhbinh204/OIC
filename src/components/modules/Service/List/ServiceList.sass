@@ -1,0 +1,124 @@
+.section-history
+	@apply overflow-hidden
+	.title
+		@screen -md
+			@apply text-left
+	.thumb
+		@apply relative
+		.wrap-slide-years
+			@apply relative rem:min-h-[200px]
+			.swiper
+				@apply overflow-visible
+			&::before
+				content: ''
+				@apply absolute top-[calc(100%-2.4rem)] -translate-y-1/2 left-0 w-full h-1 bg-Utility-gray-100
+			.swiper-slide	
+				.item-history
+					@apply gap-5 mt-[1.4rem]
+				.content
+					@apply flex flex-col gap-5
+					.icon
+						@apply flex items-center justify-center mx-auto
+						@apply transition-all ease-in-out duration-300 sq-10 
+						
+					.number
+						@apply body-1 font-semibold text-Primary-4-Subtitle
+						@screen -md
+							@apply text-[14px]
+				.line-year
+					@apply rounded-full
+					.dot-icon
+						@apply sq-10 transition-all rounded-full overflow-visible
+						svg
+							@apply w-full h-full object-cover overflow-visible
+							circle
+								transform-origin: center
+								transform-box: fill-box
+								@apply transition-all
+								&:nth-child(1)
+									animation: ping-ring 1.8s .4s ease-out infinite both
+								&:nth-child(2)
+									animation: ping-ring 1.8s ease-out infinite both
+								&:nth-child(3)
+									animation: none
+				&:hover
+					.content
+						.number
+							@apply text-Primary-1-Subtitle font-bold
+						.icon
+							@apply scale-[1.75]
+							svg
+								path
+									@apply fill-Primary-1
+					.line-year
+						.dot-icon
+							svg
+								circle
+									@apply fill-[#8BCBFF]
+									&:last-child
+										@apply fill-Primary-1
+				&.swiper-slide-next
+					.wrap-content
+						.title-48
+							@apply text-Primary-4-Subtitle
+			.swiper-slide-thumb-active
+				.content
+					.number
+						@apply text-Primary-1-Subtitle
+					.icon
+						@apply scale-[1.75]
+						svg
+							path
+								@apply fill-Primary-1
+				.line-year
+					.dot-icon
+						svg
+							circle
+								@apply fill-[#8BCBFF]
+								&:last-child
+									@apply fill-Primary-1
+	.main
+		.swiper
+			.swiper-slide
+				@apply overflow-visible
+				.item
+					// @apply items-center
+					.col-left
+						@apply pt-10
+					.col-right
+						@apply relative xl:translate-x-[-2.2rem]
+						>.swiper
+							@apply overflow-visible xl:p-10 #{!important}
+							.swiper-slide
+								@apply overflow-visible #{!important}
+							.arrow-btn
+								@apply absolute top-2/4 -translate-y-2/4 right-[-2.2rem] z-10
+								@screen -xl
+									@apply static transform-none translate-y-0 flex-row justify-center mt-15
+						.format-content
+							ul
+								@apply gap-6
+							h3
+								@apply body-2
+
+.service-2
+	.wrapper-list
+		.item
+			@apply border-b border-b-Utility-gray-200 flex-1 pb-10
+			.number
+				line-height: calc(86/72)
+				@apply uppercase text-Primary-1 font-medium xl:rem:text-[72px] rem:text-[40px] tabular-nums mb-5
+			.title
+				@apply body-1 font-light
+.service-3
+	.wrap-main
+		.col-right
+			.format-content
+				ul
+					@apply gap-0
+.service-4
+	.wrapper-list
+		.item
+			.icon
+				span
+					@apply xl:rem:text-[72px] rem:text-[48px]

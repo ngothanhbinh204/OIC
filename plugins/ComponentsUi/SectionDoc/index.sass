@@ -1,0 +1,53 @@
+.home-6
+	@apply overflow-hidden
+	.swiper-column-auto
+		.swiper
+			@apply overflow-visible
+		.swiper-slide
+			--spv: 1
+			--mr: calc(12/1920*100rem)
+			@screen sm
+				--spv: 2
+			@screen md
+				--spv: 2
+			@screen lg
+				--spv: 3
+				--mr: calc(20/1920*100rem)
+			@screen xl
+				--spv: 4.65
+				--mr: calc(20/1920*100rem)
+	.wrap-tabslet
+		ul
+			li
+				a
+					@apply bg-Primary-3
+				&.active, &:hover
+					a
+						@apply bg-[#febe0f] text-white
+		.tabslet-content 
+			@apply mt-base
+		.slide
+			@apply xl:rem:mr-[-258px]
+			.doc-item
+				@apply flex flex-col flex-1 h-full
+				.content
+					@apply flex flex-col flex-1
+					h3
+						@apply rem:text-[16px]
+					@screen -md
+						@apply p-4
+			.wrap-indicator
+				@apply xl:rem:w-[1400px] mt-base
+				.wrap-slider-pagination
+					@apply relative z-10
+					.noUi-pips
+						@apply hidden
+					.noUi-horizontal
+						@apply rem:h-[2px] border-none bg-Utility-gray-100
+					.noUi-connect
+						@apply bg-Primary-1
+					.noUi-handle
+						@apply w-5 h-5 shadow-none border-none bg-Primary-1 rounded-full
+						@apply rem:top-[-9px] right-[-10px] cursor-pointer
+						&::before,&::after
+							@apply hidden

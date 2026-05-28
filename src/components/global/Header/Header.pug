@@ -1,0 +1,61 @@
+header.header
+	.header-container(class="xl:px-20 px-4")
+		.header-wrapper 
+			.header-logo
+				a(href="#" alt="logo") 
+					+PugImg("./img/logo.png")
+			.header-right
+				.header-right-inner
+					+HeaderLanguage()
+					.header-search 
+						<i class="fa-regular fa-magnifying-glass"></i>
+					.header-bar
+						i.fa-light.fa-bars
+.nav-mobile(class="fixed top-header right-0 w-full z-[200]")
+	.nav-main(class="grid grid-cols-[calc(84/800*100%)_1fr] pl-5 h-full py-5 xl:rem:gap-[54px] gap-base")
+		.wrap-title(class="flex flex-col items-center justify-between")
+			.item PARTNER
+			.item CAPITAL
+			.item KATINA
+		.nav-wrapper(class="h-full flex flex-col relative flex-1 overflow-hidden xl:pr-20 pr-10")
+			.close-nav 
+				i.fa-light.fa-xmark
+			.nav-wrapper-inner.overflow-auto(class="overflow-x-hidden flex flex-col justify-between")
+				nav
+					ul
+						li 
+							a(href="#") home
+						li 
+							a(href="#") services
+						li 
+							a(href="#") Leadership & Management
+						li 
+							a(href="#") track record
+						li 
+							a(href="#") media
+						li 
+							a(href="#") careers
+						li 
+							a(href="#") contact us
+			.nav-contact(class="flex flex-col gap-2")
+				.item 
+					p 
+						a(href="#") (+84) 28 38275080
+				.item 
+					p 
+						a(href="#") Address: Floor 46, Bitexco Financial Tower, No. 2 Hai Trieu, Sai Gon Ward, Ho Chi Minh City, Vietnam
+				.item 
+					p 
+						a(href="#") Fax (+84) 28 38288080
+				.item 
+					p 
+						a(href="#") info@katinacapital.com
+.header-search-form
+	.close.flex.items-center.justify-center.absolute.top-0.right-0.bg-white.text-3xl.cursor-pointer(class="w-12.5 h-12.5")
+		i.fa-light.fa-xmark
+	.container
+		.wrap-form-search-product
+			.productsearchbox
+				input(type="text" placeholder="Tìm kiếm thông tin")
+				button
+					i.fa-light.fa-magnifying-glass

@@ -1,0 +1,10 @@
+.slide-image
+	.swiper-column-auto(class="relative swiper-infinite autoplay")
+		.swiper 
+			.swiper-wrapper
+				-for(let i = 0; i < 10; i++)
+					.swiper-slide
+						.item
+							.img
+								a(href="#" class="img-ratio ratio:pt-[400_600] rounded-5 img-zoom") 
+									+PugImg()

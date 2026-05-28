@@ -1,0 +1,42 @@
+section.project-1(class="xl:pb-20 pb-10")
+	.container 
+		.wrap-heading(class="pt-10")
+			ul.nav-primary 
+				li 
+					a(href="#") GIAO THÔNG ĐƯỜNG BỘ
+				li 
+					a(href="#") GIAO THÔNG ĐƯỜNG BỘ
+				li 
+					a(href="#") GIAO THÔNG ĐƯỜNG BỘ
+				li 
+					a(href="#") GIAO THÔNG ĐƯỜNG BỘ
+				li 
+					a(href="#") GIAO THÔNG ĐƯỜNG BỘ
+		.wrapper-main(class="grid lg:grid-cols-[calc(480/1400*100%)_1fr] grid-cols-1 xl:gap-0 gap-base xl:pt-20 pt-10")
+			.col-left(class="xl:py-10 xl:px-8 p-4 bg-Utility-gray-50")
+				.wrap-content-top(class="rem:mb-[27px]")
+					.sub-title(class="mb-3 text-Primary-1-Subtitle") Gói thầu XL8
+					h3.title(class="heading-3 text-Primary-1 font-bold")
+						a(href="#") Dự án Xây dựng một số đoạn đường bộ cao tốc trên tuyến Bắc - Nam phía Đông giai đoạn 2017 – 2020
+				.wrap-infos(class="flex flex-col gap-4") 
+					-for(i=0;i<3;i++)
+						.item(class="flex gap-3")
+							.icon(class="w-6 h-5 inline-flex body-2 text-Primary-1") 
+								<i class="fa-light fa-user"></i>
+							.content(class="body-4") 
+								.label(class="font-bold mb-1") Chủ đầu tư
+								.value(class="font-normal") Ban QLDA Đường Hồ Chí Minh
+				.wrap-btn(class="rem:mt-[27px]") 
+					+BtnPrimary({option:"style-default"})
+			.col-right
+				.img 
+					a(href="#" class="img-ratio ratio:pt-[506_920] zoom-img") 
+						+PugImg()
+		.list-projects(class="grid md:grid-cols-3 grid-cols-2 gap-base mt-base")
+			-for(i=0;i<6;i++)
+				+ProjectItem()
+		.pagination(class="flex-center mt-base")
+			ul
+				-for(let i=0;i<3;i++)
+					li 
+						a(href="#") #{i+1}

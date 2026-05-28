@@ -1,0 +1,49 @@
+.home-7
+	@apply relative
+	.decor
+		@apply absolute bottom-0 left-0 w-auto rem:h-[424px] pointer-events-none z-1 xl:block hidden
+		img
+			@apply w-full h-full object-contain
+	.wrapper-main
+		.col-right
+			form
+				.wrap-form
+					.form-group
+						@apply w-full flex items-center			
+						// @apply border-b border-b-Utility-gray-200	
+						@screen -xl
+							@apply flex-col items-start
+						.wpcf7-form-control-wrap
+							@apply w-full						
+						.wpcf7-not-valid-tip
+							@screen xl
+								@apply absolute top-2/4 right-0 mt-0 -translate-y-2/4
+						.label
+							@apply flex items-center h-full
+							@apply md:rem:max-w-[160px] rem:max-w-[72px] w-full body-1 font-medium text-Utility-black
+							@apply xl:border-b xl:border-b-Utility-gray-200
+						.required_dot
+							@apply text-Primary-1-Subtitle
+						input, select
+							@apply h-12 inline-flex items-center  flex-1 w-full
+							@apply  bg-transparent placeholder:text-Primary-4-Subtitle body-1 font-light text-black
+							@apply border-b border-b-Utility-gray-200
+						select
+							background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='13' height='25' fill='none' viewBox='0 0 13 25'%3e%3cpath fill='black' d='m11.004 11.934-4.465 4.5c-.246.21-.527.316-.809.316-.316 0-.597-.105-.808-.316l-4.465-4.5a1.089 1.089 0 0 1-.281-1.23A1.151 1.151 0 0 1 1.23 10h8.965c.457 0 .844.281 1.02.703.176.422.105.914-.211 1.23Z'/%3e%3c/svg%3e")
+							background-repeat: no-repeat
+							background-position: right 0.5rem center
+							background-size: 0.6rem
+							@apply appearance-none
+							option
+								@apply text-Primary-4-Subtitle
+						&.textarea
+							@apply flex flex-col items-start gap-1 border-b-transparent
+							@screen xl
+								.wpcf7-not-valid-tip
+									@apply top-0 mt-0
+							.label
+								@apply border-b-transparent
+							textarea
+								@apply w-full bg-transparent resize-none rem:max-h-[136px] h-full
+								@apply placeholder:text-Primary-4-Subtitle body-1 font-light text-black
+								@apply border-b border-b-Utility-gray-200

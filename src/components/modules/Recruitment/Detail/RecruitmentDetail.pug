@@ -1,0 +1,106 @@
+section.recruit-detail(class="section-py")
+	.container 
+		.grid.grid-cols-12(class="xl:gap-base")
+			.col-span-12(class='lg:col-span-8')
+				.info-wrap(class='block  lg:p-10 bg-Utility-gray-50 p-6 mb-10')
+					h2.heading-1.mb-6(class='lg:mb-10 text-Primary-1') Nhân viên thiết kế 
+					.row 
+						.col.w-full(class="rem:max-w-[360px]")
+							.img.zoom-in.overflow-hidden
+								a.img-ratio(class='ratio:pt-[300_360]')
+									+PugImg()
+						.col.w-full
+							.table-wrap
+								table 
+									tbody
+										tr
+											td Vị trí 
+											td Nhân viên Shop Drawing
+										tr
+											td Chức vụ
+											td Nhân viên
+										tr
+											td Yêu cầu bằng cấp
+											td Cao đẳng/ Đại học
+										tr
+											td Mức lương
+											td Thương lượng
+										tr
+											td Số lượng ứng tuyển
+											td 02
+										tr
+											td Địa điểm làm việc
+											td TP. Hồ Chí Minh
+										tr
+											td Hạn nộp hồ sơ
+											td 04.07.2024
+				-for(i=1;i<3;i++)
+					.block-wrap(class='bg-Utility-gray-50 p-6 lg:p-10 mb-10 last:mb-0')
+						h3.heading-3.mb-5.text-Primary-1 mô tả côn việc
+						.format-content
+							h5 Lorem ipsum dolor sit amet, consectetur 
+							ul
+								li Lương thỏa thuận + hoa hồng theo kết quả
+								li Tham gia BHXH, BHYT, Du lịch theo quy định
+								li Được đào tạo trong môi trường chuyên nghiệp
+								li Chế độ phúc lợi, lễ, tết và thưởng theo quy định công ty
+								li Phối hợp và hỗ trợ kinh doanh thực hiện tư vấn bán hàng.
+								li Mở rộng hệ thống nông dân - Thử nghiệm sản phẩm mới: thử nghiệm, quay phim, chụp ảnh, gửi cho bộ phận Marketing.
+							h5 Lorem ipsum dolor sit amet, consectetur 
+							ul
+								li Lương thỏa thuận + hoa hồng theo kết quả
+								li Tham gia BHXH, BHYT, Du lịch theo quy định
+								li Được đào tạo trong môi trường chuyên nghiệp
+								li Chế độ phúc lợi, lễ, tết và thưởng theo quy định công ty
+								li Phối hợp và hỗ trợ kinh doanh thực hiện tư vấn bán hàng.
+								li Mở rộng hệ thống nông dân - Thử nghiệm sản phẩm mới: thử nghiệm, quay phim, chụp ảnh, gửi cho bộ phận Marketing.
+			.col-span-12(class='lg:col-span-4')
+				.btn-group.p-6.w-full.mb-10(class="bg-Utility-gray-50")
+					a.btn.w-full.btn-primary.style-default.mb-3(href='#recruit-modal' data-fancybox)
+						span ứng tuyển
+						em.fa-regular.fa-plus
+					a.btn.w-full.btn-primary.white
+						span tải hồ sơ ứng tuyển
+						em.fa-regular.fa-file-download
+
+				.other-recruit
+					.tilte-wrap.bg-Primary-1.p-5
+						h3.heading-3.text-white Các vị trí khác
+					.wrap.bg-grey-50
+						-for(i=1;i<5;i++)
+							.recruit-item.group.border-b.overflow-hidden.p-6
+								.txt.col-hor
+									h3.mb-3(class="text-base font-normal")
+										a(class='group-hover:underline') Nghiên cứu viên 
+									.timeline.text-lg.text-grey-500
+										em.fa-regular.fa-calendar-star
+										span Hạn nộp hồ sơ:
+										strong.inline-block.text-primary-1 20.06.2024
+.popup-modal#recruit-modal.recruit-modal.hidden
+	.popup-modal-wrap
+		h2.form-title.text-center.text-primary-1.font-bold Business Development Manager
+		.desc.my-4.text-center.body-1 Vui lòng điền thông tin vào form dưới đây để nhận tư vấn nhanh chóng. Chúng tôi sẽ liên hệ lại với bạn trong thời gian sớm nhất để hỗ trợ giải đáp thắc mắc.
+		form(action="")
+			.wrap-form(class="grid lg:grid-cols-2 grid-cols-1 gap-4") 
+				.form-group
+					input(type="text" name="ho-va-ten" placeholder="Họ và tên")
+				.form-group
+					input(type="tel" name="so-dien-thoai" placeholder="Số điện thoại")
+				.form-group
+					input(type="email" name="email" placeholder="Email")
+				.form-group.form-input-file
+					input(type="file" name="file-cv" accept=".rar,.zip,.doc,.docx,.pdf")
+					.btn-file-upload
+						span.file-name-display File đính kèm 1 (rar, zip, doc, docx, pdf, &lt;1MB)
+						.wrap-action
+							.btn-upload-trigger
+								span Tải file
+								i.fa-regular.fa-upload
+							button.btn-remove-file(type="button")
+								i.fa-light.fa-xmark
+				.form-group.textarea
+					textarea(placeholder='Nội dung') 
+			.form-submit
+				button(class="btn btn-primary style-default")
+					span Ứng tuyển ngay
+					.icon

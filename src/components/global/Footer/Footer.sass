@@ -1,0 +1,97 @@
+.footer
+	@apply border-t-8 border-t-Primary-1 relative overflow-hidden
+	.color
+		animation: moveLight 10s ease-in-out infinite both
+		@apply absolute top-0 left-0 w-full h-full pointer-events-none -z-1 rounded-full
+		@apply xl:block hidden
+		img
+			@apply w-full h-full object-cover rounded-full
+	.footer-top
+		.footer-logo
+			@apply rem:w-[239px]
+		.footer-wrapper
+			.col-left
+				@screen -xl
+					@apply order-2
+				.footer-social
+					@apply mb-base xl:mt-25 mt-base
+					ul
+						@apply flex flex-col gap-3
+						li
+							@apply inline-flex
+							a				
+								@apply inline-flex items-center gap-3 text-Primary-1		
+								span
+									@apply heading-5 font-semibold
+								.icon
+									@apply sq-10 inline-flex items-center justify-center rounded-full
+									@apply border border-Primary-1
+									i
+										@apply body-2 font-normal text-Primary-1
+							&:hover
+								a									
+									.icon
+										@apply bg-Primary-1
+										i
+											@apply text-white
+			.col-right
+				@apply lg:text-right
+				@screen -xl
+					@apply order-1
+				.footer-menu
+					@apply xl:rem:mb-[68px] mb-base
+					ul
+						@apply flex flex-col gap-3
+						li
+							a
+								@apply lg:text-32 text-28 font-black text-black/50 uppercase hover:text-Primary-1
+								@screen -md
+									@apply text-lg
+							&[class*="current"]
+								>a
+									@apply text-Primary-1
+				.nav-contact
+					.item
+						@apply body-1 flex xl:justify-end justify-start gap-1
+						@screen -md
+							@apply text-[14px]
+						label
+							@apply font-bold text-black
+						a
+							@apply hover:text-Primary-1
+						&:first-child						
+							p
+								a
+									@apply text-Primary-1-Subtitle heading-3 font-semibold hover:text-Primary-1
+						&:last-child
+							p
+								a
+									@apply font-light underline body-1 text-Primary-1-Subtitle hover:text-Primary-1
+	.footer-bottom
+		ul
+			@apply flex items-center
+			li
+				&+li
+					&::before
+						content: '|'
+						@apply text-black/25
+						@apply mx-4
+				&:hover
+					a
+						@apply text-Primary-1
+@keyframes moveLight
+	0%
+		transform:  scale(1.15)
+		left: 0%
+		opacity: 0
+	25%
+		opacity: 1
+	50%
+		left: 20%
+		opacity: 0.8
+	75%
+		opacity: 1
+	100%
+		right: 80%
+		opacity: 0.7
+		transform: scale(1.2)						

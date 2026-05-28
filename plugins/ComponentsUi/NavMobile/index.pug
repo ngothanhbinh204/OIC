@@ -1,0 +1,31 @@
+.nav-mobile(class="fixed top-header right-0 w-full z-[90] flex flex-col")
+	.decor-1 
+		img(src="./img/decor-1.png", alt="")
+	.decor-2 
+		img(src="./img/decor-2.svg", alt="")
+	.nav-wrapper
+		.nav-wrapper-inner.overflow-auto(class="overflow-x-hidden flex flex-col justify-between")
+			nav
+				ul
+					li 
+						a(href="/about.html") About us
+					li 
+						a(href="./Why.html") Why choose Dong Nai
+					li 
+						a(href="./ProjectList.html") Project
+					li 
+						a(href="./Investment.html") Investment Consulting & Support
+					li 
+						a(href="./NewsList.html") News
+					li 
+						a(href="./Sustain.html") Sustainability
+					li 
+						a(href="./RecruitmentList.html") Career
+					li 
+						a(href="./Contact.html") Contact us
+			.nav-social 
+				ul
+					-for(let i=0;i<4;i++)
+						li 
+							a(href="#") 
+								i.fa-brands.fa-facebook-f

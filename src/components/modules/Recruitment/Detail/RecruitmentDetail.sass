@@ -1,0 +1,375 @@
+
+.other-recruit-wrap
+	@apply sticky
+.recruit-detail
+	.btn-group 
+		a.btn-primary.style-default
+			@apply bg-Primary-1
+			span
+				@apply text-white
+			em
+				@apply text-white
+		a.btn-primary.white
+			@apply bg-white
+			&:hover
+				@apply bg-Primary-1
+	.row
+		@screen -md
+			@apply flex-col
+		.col
+			&:nth-child(1)
+				@apply xl:rem:max-w-[360px] w-full
+			&:nth-child(2)
+				@apply flex-1
+	.table-wrap
+		@apply flex-center w-full
+		table
+			@apply w-full
+		td
+			@apply text-base py-3 w-full border-t border-Utility-gray-200
+			@screen sm
+				@apply  py-2
+			@screen md
+				@apply  w-1/2
+		table
+			@media screen and ( max-width: 1024px)
+				@apply whitespace-normal
+			tr
+				@media screen and ( max-width: 768px)
+					@apply flex flex-wrap
+					td
+						@apply  block w-full
+				td
+					@apply text-base
+					&:first-child
+						@apply font-bold text-base
+				&:last-child
+					td
+						@apply border-b border-Utility-gray-200
+						&:first-child
+							@apply font-bold text-Primary-1
+				p
+					@apply mb-0  text-lg
+					span,strong
+						@apply w-1/2 inline-block
+					*
+						@apply text-lg
+	.btn
+		@apply w-full flex-between
+.other-recruit
+	.recruit-item
+		border-bottom: 1px solid #d9d9d9 
+		@apply bg-Utility-gray-50
+		&:last-child
+			@apply border-b-transparent 
+	.timeline
+		@apply flex items-center gap-3
+		em
+			@apply font-awesome font-light
+			color: #2F2D30
+		span
+			color: #2F2D30
+		strong
+			@apply text-Primary-1 font-normal
+.form-apply
+	iframe
+		width: 100%
+		height: 410px
+		@media screen and ( min-width: 1200px) and ( max-width: 1800px)
+			height: 400px
+		@screen xl
+			@apply w-full
+	.container-fluid
+		padding: 0 !important
+#ctl00_phMain_jobApply_upContact
+	margin-bottom: 0 !important
+.recruit-container
+	padding: 0 !important
+.apply-frm
+	margin: 0 !important
+	overflow: hidden
+	background: #fff !important
+	width: 100%
+	height: 100%
+	.alert-success
+		@apply text-2xl text-center text-Primary-1 block w-full 
+		*
+			@apply text-2xl
+	@media screen and ( max-width:  576px)
+		overflow: hidden
+		width: 100%
+	.btn-wrap
+		@apply w-full flex-between
+		@media screen and ( max-width: 600px)
+			@apply flex flex-col
+			align-items: flex-start
+		.form-group
+			@apply w-full
+		.frm-btn
+			@apply flex-start w-fit
+			@media screen and ( min-width: 600px)
+				@apply flex-end
+	.btn-submit
+		@apply bg-Primary-1 border-Utility-gray-200 text-white font-bold rounded-full transition h-[48px] px-8
+		min-width: 240px
+	.recruitment-container
+		min-width: 1110px !important
+	.frm-captcha
+		@apply my-6
+		@screen lg
+			@apply absolute right-0  pr-8
+			bottom: 0
+			width: auto !important
+			margin-top: 0 !important
+	h4
+		@apply hidden
+	.frm-captcha
+		@media screen and ( max-width: 1024px)
+			margin-top: 20px !important
+		.frm-captcha-input
+			@media screen and ( max-width: 576px)
+				@apply mt-5
+			input
+				@apply border h-[44px] overflow-hidden rounded-full 
+				width: r(280px)
+				max-width: r(280px) !important
+				&::placeholder
+					@apply text-lg 
+	input[type="file"]
+		left: 0
+	>div
+		width: 100%
+	.RadUpload_Simple 
+		width: 100%
+		height: 100%
+		input
+			width: 100%
+			height: 100%
+	.RadUpload 
+		width: 100%
+		height: 100%
+		pointer-events:  auto
+		@apply border border-Utility-gray-100
+		min-height: 46px
+		height: 46px
+		.ruButton
+			@applY uppercase opacity-0
+			font-family: 'Nunito Sans', sans-serif
+		.ruInputs
+			width: 100%
+			position: relative
+		.ruRemove
+			position: absolute
+			bottom: -77px
+			right: 0
+			opacity: 1
+			font-size: 12px
+			color: #ff0000
+			width: auto !important
+			display: block
+			height: 20px !important
+			background-position: 0px -62px
+		.ruBrowse
+			@apply hidden
+	#ctl00_phMain_jobApply_pnlNewComment
+		position: relative
+		display: flex
+		flex-wrap: wrap
+		>.form-group
+			width: 100%
+			margin-top: -10px
+			position: relative
+		.col-left,.col-right
+			flex: 0 0 100%
+			max-width: 100%
+			display: flex
+			flex-wrap: wrap
+			>.form-group
+				margin-bottom: 30px
+			@media (min-width: 576px)
+				margin: 0 -10px
+				>.form-group
+					padding: 0 10px
+	.fa-exclamation-triangle
+		@apply absolute font-normal 
+		bottom: -22px
+		left: 20px
+		color: #f30000
+		font-size: 12px
+	.label
+		display: none
+		font-size: 14px
+		font-weight: 400
+		color: #999999
+		margin-bottom: 4px
+		.required
+			color: red
+	
+	textarea
+		height: 90px
+		@screen xl
+			height: 130px
+	.RadAsyncUpload
+		.ruDropZone
+			display: none
+		.ruFileWrap
+			position: static
+			display: block
+			height: auto !important
+			max-height: 50px
+			.ruUploadProgress 
+				position: absolute
+				bottom: -70px
+				left: 10px
+		.ruFileInput, .rugreyse
+			height: 50px
+			width: 120px
+			height: 50px
+			text-transform: uppercase
+			font-size: 15px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 1px solid #333
+			background: #333
+			height: 50px
+			width: 250px
+			&:hover
+				background: white !important
+				color: #333 !important
+		.ruFileInput
+			cursor: pointer
+			border: 1px solid #333
+			pointer-events: auto
+			top: 0 !important
+			left: 0
+			padding: 0 !important
+			bottom: 10px
+			position: absolute
+			opacity: 0
+			height: 40px
+			width: 100% !important
+			cursor: pointer
+			&:hover
+				background: white !important
+				color: #333 !important
+	.form-group-btn
+		@media screen and ( max-width: 1024px)
+			@apply flex-start mt-6
+		@screen lg
+			@apply absolute right-[20px] bottom-0
+	.frm-btnwrap
+		@apply flex-start w-auto mt-8
+		@media screen and ( max-width: 576px)
+			position: static !important
+	.attachfile1
+		@apply block relative
+		.left
+			@apply absolute top-0 left-0 bottom-0 right-0 w-full h-full  cursor-pointer pointer-events-none
+			z-index: 99
+		label
+			@apply flex-start   font-normal  relative pointer-events-none  w-full  text-base  rounded-none text-Primary-1 px-[20px] bg-Utility-gray-50
+			margin-top: 0
+			height: 46px
+			font-weight: 400 !important
+			@media screen and ( max-width: 1024px)
+				word-break: break-normal 
+			*
+				@apply text-Primary-1 #{!important}
+				font: inherit
+			input[type='file']
+				@apply w-full cursor-pointer h-full
+			input[type='file']::file-selector-button
+				cursor: pointer
+			input[type='file']::-webkit-file-upload-button 
+				cursor: pointer
+			::-webkit-file-upload-button 
+				cursor: pointer
+	.attachfile2
+		display: none
+	.form-group 
+		position: relative
+		&.disable-input
+			input
+				@apply pointer-events-none
+				background: #F1F1F1
+				border: none
+	.wrap-form
+		@apply w-full
+		.form-group
+			@media screen and ( max-width: 1024px)
+				grid-column: span 1 / span 1
+			@media screen and ( max-width: 768px)
+				grid-column: span 2 / span 2
+			&.col-span-2
+				@media screen and ( min-width: 768px) and ( max-width: 1200px)
+					grid-column: span 2 / span 2 !important
+			input,textarea,select
+				@apply px-5 border border-Utility-gray-100
+				min-height: 46px
+				height: 46px
+				&::placeholder
+					@apply text-base font-normal
+					
+			textarea
+				@apply pt-4 px-5 border border-Utility-gray-100
+				height: 120px !important
+		.frm-btnwrap
+			@apply mt-4 #{!important}
+.popup-modal
+	@apply lg:rem:w-[1152px]  relative w-full xl:p-16 p-5 rounded-8
+	form
+		@apply w-full
+	.popup-modal-wrap
+		@screen -xl
+			@apply mt-15
+	.carousel__button
+		position: absolute !important
+		top: 0.5rem !important
+		right: 1rem !important
+		@apply sq-12 bg-Primary-1
+	form
+		&.invalid
+			.form-group
+				@apply gap-0
+			.form-submit
+				@apply mt-6
+		.form-group
+			@apply relative cursor-pointer
+			&:focus
+				outline: none !important
+			&.textarea
+				@apply col-span-full
+				textarea
+					@apply rem:max-h-[120px] h-full py-3 px-5 resize-none
+			&.form-input-file
+				@apply cursor-pointer
+				input[type="file"]
+					@apply hidden
+				.btn-file-upload
+					@apply flex items-center justify-between gap-3 w-full border border-Utility-gray-100 px-5 cursor-pointer
+					@apply rem:h-[52px]
+					.file-name-display
+						@apply body-1 text-Primary-1 font-normal flex-1 truncate
+						&.has-file
+							@apply text-black
+					.wrap-action
+						@apply flex items-center gap-2 flex-shrink-0
+					.btn-upload-trigger
+						@apply flex items-center gap-2 bg-Utility-gray-500 text-white rem:px-[8px] rem:h-[32px] rounded-2 body-4 font-normal whitespace-nowrap pointer-events-none
+						i
+							@apply text-base font-light
+					.btn-remove-file
+						@apply sq-9 items-center justify-center rounded-full bg-red-500 text-white text-base flex-shrink-0 pointer-events-auto
+						display: none
+						&.show
+							@apply flex
+			input, textarea
+				@apply w-full px-6 py-2 border border-Utility-gray-100 text-black body-1 leading-6 font-normal
+				@apply placeholder:text-Utility-gray-500
+				&:focus
+					outline: none !important
+			.wpcf7-not-valid-tip
+				@apply my-2
+		.form-submit
+			@apply flex items-center justify-center mt-4

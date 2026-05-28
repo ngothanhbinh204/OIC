@@ -1,0 +1,63 @@
+.home-3
+	@apply relative
+	@screen -xl
+		@apply pt-0 #{!important}
+	.title
+		line-height: calc(120/96)
+		@screen -xl
+			@apply text-left
+		&.bottom-title
+			@screen -xl
+				@apply text-left mb-20
+		// @screen -xl
+		// 	@apply text-left mb-20
+	.decor
+		@apply absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4
+		@apply rem:w-[157px] h-full pointer-events-none xl:block hidden
+		img
+			@apply w-full h-full object-contain
+	// .wrapper-lists 
+	// 	@screen -lg
+	// 		@apply gap-20
+	.wrapper
+		&:nth-child(even)
+			@apply xl:flex-row-reverse flex-col
+			.col-left
+				@apply xl:pl-[9.8rem] ml-0 pr-0 xl:mr-[2rem]
+				.dot
+					@apply left-[1rem] right-auto
+				.swiper
+					.arrow-btn
+						@apply right-[-5rem] left-auto
+			.col-right
+				@apply xl:mr-[6rem] xl:text-right xl:pl-[12rem]
+		// &:last-child
+		// 	.col-left
+		// 		.dot
+		// 			@apply right-[3.2rem]
+		.col-left
+			// @apply relative
+			.dot
+				@apply absolute top-2/4 -translate-y-2/4 right-[1.5625rem] z-2 xl:block hidden
+				
+			.swiper
+				@apply relative
+				@apply overflow-visible #{!important}
+				.arrow-btn
+					@apply absolute top-2/4 -translate-y-2/4 left-[-5rem]
+					@screen -lg
+						@apply static flex-row justify-center mt-15
+				.swiper-slide
+					@apply overflow-visible #{!important}
+					&::before
+						content: ""
+						@apply w-full h-full pointer-events-none absolute z-1 bg-black/40 transition-all duration-300
+				.swiper-slide-active
+					&::before
+						@apply bg-transparent
+		.col-right
+			.swiper
+				@apply relative
+				@apply overflow-visible #{!important}
+				.swiper-slide
+					@apply overflow-visible #{!important}

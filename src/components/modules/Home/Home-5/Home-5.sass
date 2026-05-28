@@ -1,0 +1,20 @@
+.home-5
+	.slide
+		.swiper
+			.swiper-wrapper
+				.swiper-slide
+					@screen xl
+					--spv: 9
+					--mr: calc(23/1920*100rem)
+					@screen -xl
+						--spv: 6
+						--mr: calc(20/1920*100rem)
+					@screen -lg
+						--spv: 4
+						--mr: calc(12/1920*100rem)
+					@screen -md
+						--spv: 3
+						--mr: calc(12/1920*100rem)
+					.item
+						img
+							@apply object-contain

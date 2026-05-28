@@ -1,0 +1,75 @@
+.overview-1
+	.title
+		@screen -md
+			@apply text-left
+.overview-2
+	.title
+		@screen -md
+			@apply text-left mb-5
+	.lists
+		.item
+			@screen -lg
+				@apply gap-3
+			.wrap-content 
+				@screen -lg
+					@apply grid-cols-1 gap-3
+			.wrap-image
+				@screen xl
+					@apply rem:h-[118px] overflow-hidden opacity-70
+					transition: height 500ms ease-in-out
+					will-change: height
+				a
+					@screen -lg
+						@apply pt-[68%]
+			.number
+				-webkit-text-stroke-width: 1px
+				-webkit-text-stroke-color: var(--Utility-gray-300, #BDBDBD)
+				line-height: calc(72/60)
+				@apply text-transparent transition-all ease-in-out duration-500
+				@screen -lg
+					@apply text-Primary-1-Subtitle
+			.caption
+				.toggle-hidden
+					>div
+						@screen -lg
+							@apply overflow-visible
+				.title
+					@apply transition-all duration-500		
+					@screen -lg
+						@apply text-Primary-1-Subtitle
+				.format-content					
+					transition: opacity 0.45s ease 0.28s, transform 0.45s ease 0.28s
+					@apply xl:opacity-0 xl:translate-y-[1rem]
+					@screen -lg
+						@apply mt-2
+			@screen xl
+				&.active
+					.wrap-content
+						@apply items-start
+					.wrap-image
+						@apply opacity-100
+						@screen xl
+							@apply rem:h-[363px]
+							a
+								@apply ratio:pt-[363_650] transition-all ease-in-out duration-700
+					.number
+						@apply text-Primary-1-Subtitle
+						-webkit-text-stroke-width: unset
+						-webkit-text-stroke-color: unset
+					.caption
+						.title
+							@apply text-Primary-1
+						.toggle-hidden
+							grid-template-rows: 1fr
+						.format-content
+							@apply opacity-100 translate-y-0
+	@media (prefers-reduced-motion: reduce)
+		.lists
+			.item
+				.wrap-image
+					transition: none
+				.number
+					transition: none
+				.caption
+					.title
+						transition: none					

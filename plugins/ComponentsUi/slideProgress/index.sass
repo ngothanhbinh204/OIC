@@ -1,0 +1,40 @@
+.section-slide-progress
+	@apply relative overflow-hidden
+	.text-linear 
+		h2
+			background: linear-gradient(180deg, rgba(0, 4, 122, 0.02) 0%, rgba(0, 4, 122, 0.08) 79.38%)
+			background-clip: text
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			@apply absolute rem:top-[30px] right-0  pointer-events-none z-1
+			@apply xl:rem:text-[128px] text-7xl font-black leading-[1.1]
+	.swiper
+		@apply rem:pt-[20px] rem:mt-[-20px]
+		.swiper-slide
+			@apply transition-transform duration-300
+			&::before
+				content: ""
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.40) 100%)
+				@apply absolute w-full h-full top-0 left-0 pointer-events-none z-1 opacity-100
+				@apply transition-opacity duration-300
+			&::after
+				content: ""
+				background: linear-gradient(192deg, rgba(250, 166, 24, 0) 1.93%, rgb(255 160 0) 90.93%)
+				@apply absolute w-full h-full top-0 left-0 pointer-events-none z-1 opacity-0
+				@apply transition-opacity duration-300
+			.item
+				@apply relative  cursor-pointer				
+				.content
+					@apply absolute bottom-0 left-0 w-full p-6 text-center z-2
+			&:hover
+				@apply rem:translate-y-[-20px]
+				&::before
+					@apply opacity-0
+				&::after
+					@apply opacity-100
+	.slide
+		.swiper-scrollbar
+			@apply static bg-Utility-gray-300 rem:h-[1px]  inline-flex items-center
+			@apply opacity-100 #{!important}
+			.swiper-scrollbar-drag
+				@apply bg-Primary-3 rem:h-[3px]
