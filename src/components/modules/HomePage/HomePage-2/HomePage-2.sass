@@ -1,0 +1,26 @@
+.home-page-2
+	@apply bg-Utility-white
+
+	.wrapper
+		@apply gap-10 lg:gap-12 xl:gap-24
+
+	.col-content
+		.block-title
+			@apply text-Utility-gray-950-maintext mb-6
+
+		.desc
+			@apply text-Utility-gray-900 font-normal mb-5 lg:max-w-[85%] body-2 space-y-6 text-justify
+		.wrap-btn
+			.btn
+				&.btn-primary
+					&.style-default
+						@apply border-Utility-gray-950-maintext
+						&:hover
+							@apply border-Primary-2
+
+	.col-image
+		.img
+			@apply block overflow-hidden rounded-8
+			img
+				@apply w-full h-full object-cover
+

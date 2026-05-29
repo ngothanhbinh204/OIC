@@ -426,40 +426,13 @@ export const homePage = {
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						const title = entry.target;
-						const position = window.getComputedStyle(title).textAlign;
-						let animateFrom = "first";
-						if (position === "center") {
-							animateFrom = "center";
-						}
-						if (position === "right") {
-							animateFrom = "last";
-						}
-
-						const splitText = SplitText.create(title, {
-							type: "chars,words",
-						});
-						const chars = splitText.chars;
-						chars.forEach((char) => {
-							char.style.display = "inline-block";
-						});
-
-						title.style.opacity = 1;
-						utils.set(chars, {
-							opacity: 0,
-							y: getRem(48),
-						});
-
-						animate(chars, {
+						animate(title, {
 							opacity: 1,
+							x: 0,
 							y: 0,
-							duration: 650,
-							ease: createSpring({
-								stiffness: 100,
-								damping: 14,
-							}),
-							delay: stagger(32, {
-								from: animateFrom,
-							}),
+							filter: "blur(0px)",
+							duration: 760,
+							ease: "outQuart",
 						});
 						obs.unobserve(title); // Only animate once
 					}
@@ -473,7 +446,20 @@ export const homePage = {
 		homeSection.forEach((home) => {
 			const title = home.querySelector(".block-title");
 			if (!title) return;
-			title.style.opacity = 0;
+			const position = window.getComputedStyle(title).textAlign;
+			let offsetX = 0;
+			if (position === "left" || position === "start") {
+				offsetX = getRem(24);
+			}
+			if (position === "right" || position === "end") {
+				offsetX = getRem(-24);
+			}
+			utils.set(title, {
+				opacity: 0,
+				x: offsetX,
+				y: getRem(12),
+				filter: "blur(6px)",
+			});
 			observer.observe(title);
 		});
 	},

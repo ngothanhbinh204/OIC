@@ -1,0 +1,32 @@
+section.section-homepage-1.home-page-1
+	.swiper
+		.swiper-wrapper
+			.swiper-slide
+				.banner
+					a.media(href="#" class="")
+						+PugImg("/img/banner_1.png")
+					.overlay
+					.content(class="absolute inset-0")
+						.container(class="h-full")
+							.inner(class="h-full flex flex-col justify-center")
+								h1.title.block-title Vững nền móng <br> Chuẩn từng cấu kiện
+								p.desc Sản xuất bê tông đúc sẵn công nghệ cao, đáp ứng nhanh mọi quy mô dự án.
+								.actions(class="flex flex-wrap items-center")
+									+BtnPrimary({ text: "Khám phá thêm", option: "style-default-white rounded" })
+									+BtnPrimary({ text: "Nhận báo giá", option: "btn-base rounded" })(class="")
+			.swiper-slide
+				.banner
+					a.media(href="#" class="")
+						+PugImg("/img/banner_1.png")
+					.overlay
+					.content(class="absolute inset-0")
+						.container(class="h-full")
+							.inner(class="h-full flex flex-col justify-center")
+								h1.title.block-title Vững nền móng <br> Chuẩn từng cấu kiện
+								p.desc Sản xuất bê tông đúc sẵn công nghệ cao, đáp ứng nhanh mọi quy mô dự án.
+								.actions(class="flex flex-wrap items-center")
+									+BtnPrimary({ text: "Khám phá thêm", option: "style-default-white rounded" })
+									+BtnPrimary({ text: "Nhận báo giá", option: "btn-base rounded" })(class="")
+	.controls.wrap-button-slide
+		.btn.btn-sw-1.btn-prev(type="button")
+		.btn.btn-sw-1.btn-next(type="button")

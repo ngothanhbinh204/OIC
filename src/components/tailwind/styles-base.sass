@@ -74,9 +74,10 @@
 
 	a
 		@apply transition-all ease-linear duration-200
-
+	h1, h2, h3, h4, h5, h6
+		@apply font-secondary font-medium
 	p
-		@apply empty:hidden
+		@apply empty:hidden font-primary
 	input
 		@apply outline-offset-0 shadow-none ring-0 #{!important}
 	.section
@@ -173,3 +174,5 @@
 			transition: visibility 1s
 			visibility: hidden
 			@apply mb-0
+	main
+		@apply pt-[var(--header-height)] min-h-screen

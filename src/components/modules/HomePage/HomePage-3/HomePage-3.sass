@@ -1,0 +1,104 @@
+.home-page-3
+	@apply bg-Utility-gray-50 py-10 lg:py-14 xl:py-20
+
+	.grid-layout
+		@apply flex flex-col gap-4 xl:rem:gap-[22px]
+
+	.grid-row
+		@apply grid gap-4 xl:rem:gap-[22px]
+
+	.grid-row-1
+		@apply grid-cols-1 lg:grid-cols-[5fr_7fr]
+
+	.grid-row-2
+		@apply grid-cols-1 lg:grid-cols-[7fr_5fr]
+		.item
+			&:last-child
+				@apply -lg:order-first
+
+	.item
+		@apply relative overflow-hidden rounded-5 px-6 py-8
+		min-height: clamp(220px, calc(320/1920*100rem), calc(320/1920*100rem))
+
+		.title
+			@apply text-Utility-white uppercase heading-32
+
+		.desc
+			@apply text-white/95 font-normal
+			@apply text-sm lg:rem:text-[18px] lg:rem:leading-[28px]
+
+	.item-text
+		@apply flex flex-col justify-end
+		@apply px-6 py-8
+
+		.icon
+			@apply mb-auto
+			span
+				@apply mb-5 text-white rem:text-[96px]
+
+		.title
+			@apply mb-2
+
+	.item-text-1
+		background: linear-gradient(253deg, #32C305 11.91%, #62B947 55.95%, #008F4A 100%)
+
+	.item-text-2
+		@apply bg-Primary-1
+
+		&::before
+			content: ""
+			background: linear-gradient(137deg, rgba(255, 255, 255, .33) 0%, rgba(255, 255, 255, 0) 75.82%)
+			@apply absolute-full z-1 pointer-events-none
+
+		.icon,
+		.title,
+		.desc
+			@apply relative z-2
+
+	.item-image
+		@apply p-0
+
+		.img
+			@apply block absolute-full
+
+			img
+				@apply w-full h-full object-cover
+
+		.content
+			background: linear-gradient(180deg, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, .70) 100%)
+			@apply absolute inset-0 z-2
+			@apply flex flex-col justify-end
+			@apply p-8 xl:rem:px-[30px] xl:rem:pb-[26px]
+
+			.title
+				@apply mb-2
+		&:hover
+			img
+				@apply scale-105
+
+	// @screen -lg
+	// 	@apply py-8
+
+	// 	.item
+	// 		@apply rounded-4 p-4
+	// 		min-height: 220px
+
+	// 		.title
+	// 			@apply text-2xl leading-1.3 mb-2
+
+	// 		.desc
+	// 			@apply text-sm leading-1.4
+
+	// 	.item-text
+	// 		.icon
+	// 			@apply text-5xl mb-3
+
+	// 	.item-image
+	// 		.img
+	// 			@apply static h-auto
+
+	// 			img
+	// 				@apply static
+
+	// 		.content
+	// 			@apply p-4

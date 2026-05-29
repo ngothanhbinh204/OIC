@@ -110,6 +110,8 @@ export function swiperInit() {
 		});
 	});
 	swiperBanner();
+	swiperHomePage1();
+	swiperHomePage4();
 	swiperHome3();
 	// swipePartner();
 	swiperHistory();
@@ -274,6 +276,130 @@ function swiperBanner() {
 
 	if (swiper.slides[swiper.activeIndex]) {
 		syncSlideMedia();
+	}
+}
+
+function swiperHomePage1() {
+	const sectionEl = document.querySelector(".home-page-1");
+	if (!sectionEl) return;
+
+	const swiperEl = sectionEl.querySelector(".swiper");
+	if (!swiperEl) return;
+
+	const swiper = new Swiper(swiperEl, {
+		modules: [Navigation, EffectFade, Autoplay],
+		loop: true,
+		effect: "fade",
+		fadeEffect: {
+			crossFade: true,
+		},
+		slidesPerView: 1,
+		speed: 1000,
+		// autoplay: {
+		// 	delay: 5200,
+		// 	disableOnInteraction: false,
+		// },
+		navigation: {
+			nextEl: ".home-page-1 .btn-next",
+			prevEl: ".home-page-1 .btn-prev",
+		},
+		on: {
+			init: function () {
+				setActiveSlide(this);
+			},
+			slideChangeTransitionStart: function () {
+				setActiveSlide(this);
+			},
+		},
+	});
+
+	function setActiveSlide(swiperInstance) {
+		const realIndex = String(swiperInstance.realIndex);
+		swiperInstance.slides.forEach((slide) => {
+			slide.classList.remove("is-current");
+			if (slide.getAttribute("data-swiper-slide-index") === realIndex) {
+				slide.classList.add("is-current");
+			}
+		});
+
+		const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+		if (activeSlide) {
+			activeSlide.classList.add("is-current");
+		}
+	}
+}
+
+function swiperHomePage4() {
+	const sectionEl = document.querySelector(".home-page-4");
+	if (!sectionEl) return;
+
+	const swiperEl = sectionEl.querySelector(".group-right .swiper");
+	if (!swiperEl) return;
+
+	const infoItems = Array.from(sectionEl.querySelectorAll(".group-left .item-info"));
+	const imageItems = Array.from(sectionEl.querySelectorAll(".group-left .item-image"));
+	const currentEl = sectionEl.querySelector(".group-left .current");
+	const totalEl = sectionEl.querySelector(".group-left .total");
+
+	const totalSlides = infoItems.length;
+	if (totalEl && totalSlides) {
+		totalEl.textContent = `/${String(totalSlides).padStart(2, "0")}`;
+	}
+
+	const swiper = new Swiper(swiperEl, {
+		modules: [Navigation],
+		loop: totalSlides > 2,
+		speed: 760,
+		spaceBetween: 16,
+		slidesPerView: 1.2,
+		navigation: {
+			nextEl: ".home-page-4 .group-left .btn-next",
+			prevEl: ".home-page-4 .group-left .btn-prev",
+		},
+		breakpoints: {
+			576: {
+				slidesPerView: 1.4,
+			},
+			768: {
+				slidesPerView: 1.7,
+			},
+			1024: {
+				slidesPerView: 2.1,
+			},
+		},
+		on: {
+			init: function () {
+				syncLeftContent(this.realIndex, this.realIndex);
+			},
+			slideChangeTransitionStart: function () {
+				syncLeftContent(this.realIndex, this.previousRealIndex ?? this.realIndex);
+			},
+		},
+	});
+
+	function syncLeftContent(activeIndex, prevIndex) {
+		if (!totalSlides) return;
+
+		const displayIndex = (activeIndex + 1) % totalSlides;
+		const prevDisplayIndex = (prevIndex + 1) % totalSlides;
+
+		if (currentEl) {
+			currentEl.textContent = String(displayIndex + 1).padStart(2, "0");
+		}
+
+		infoItems.forEach((item, index) => {
+			item.classList.toggle("is-current", index === displayIndex);
+		});
+
+		imageItems.forEach((item, index) => {
+			item.classList.remove("is-prev", "is-current");
+			if (index === prevDisplayIndex && index !== displayIndex) {
+				item.classList.add("is-prev");
+			}
+			if (index === displayIndex) {
+				item.classList.add("is-current");
+			}
+		});
 	}
 }
 

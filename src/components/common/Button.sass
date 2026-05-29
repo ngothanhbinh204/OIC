@@ -10,29 +10,46 @@
 			@apply w-5 h-5 border-3 border-white/40 border-t-white rounded-full inline-block
 			@apply absolute animate-spin
 	&.btn-sw-1
-		@apply sq-10 rounded-full  flex-center bg-transparent
-		@apply border-2 border-Utility-gray-200
+		@apply sq-10 rounded-full  flex-center bg-transparent bg-white border-transparent
 		&::before
-			@apply font-awesome text-Utility-gray-950-maintext text-lg font-normal
+			@apply font-awesome font-normal text-Primary-1 body-1 transition-all duration-300
 		&.btn-prev
 			&::before
-				content: '\f053'
+				content: '\ef7d'
+				font-family: 'Material Symbols Outlined'
 		&.btn-next
 			&::before
-				content: '\f054'
-				@apply font-awesome
+				content: '\e941'
+				font-family: 'Material Symbols Outlined'
 		&:hover
-			@apply bg-Primary-1 border-transparent
+			@apply bg-Primary-1 border-Primary-1
 			&::before
 				@apply text-Utility-white
+
 	// button chạy icon sang trái
 	// +BtnPrimary({option:"style-white"})
 	&.btn-primary
-		@apply rem:h-[48px] inline-flex items-center justify-center md:px-6 px-3 rounded-1  gap-2
+		@apply rem:h-[48px] inline-flex items-center justify-center md:px-6 px-3 rounded-1 gap-2.5 font-normal bg-Primary-1 border-Primary-1 text-white transition-all duration-300
+		@apply hover:bg-Primary-2 hover:border-Primary-2
+		@apply text-white
+		> *
+			@apply transition-all duration-300
 		&.style-default
-			@apply bg-transparent border border-Utility-gray-950-maintext text-Utility-gray-950-maintext
+			@apply bg-transparent border-2 border-Utility-gray-950-maintext text-Utility-gray-950-maintext
+			span
+				@apply text-Utility-gray-950-maintext
+			&:hover
+				@apply bg-Primary-2 border-Primary-2 text-white
+		&.style-default-white
+			@apply bg-transparent border-2 border-Utility-white text-Utility-white
+			span
+				@apply text-Utility-white
+			&:hover
+				@apply bg-Primary-2 border-Primary-2
 		&.white
 			@apply border
+		&.rounded
+			@apply rounded-full
 		&.style-transparent
 			@apply bg-transparent border border-transparent text-white px-0
 			@apply border-b rounded-none h-auto
@@ -41,11 +58,11 @@
 			.icon
 				&::before,&::after
 					@apply text-white
-			&:hover
-				@apply bg-transparent border-transparent
-				@apply shadow-none border-b-white
+			// &:hover
+			// 	@apply bg-transparent border-transparent
+			// 	@apply shadow-none border-b-white
 		&:hover
-			@apply text-white shadow-Shadow-1 bg-Primary-1
+			// @apply text-white shadow-Shadow-1 bg-Primary-1
 			.icon
 				&::before, &::after
 					@apply text-white
@@ -55,7 +72,9 @@
 			span
 				@apply text-white
 		span
-			@apply rem:text-[16px] font-semibold text-Primary-1
+			@apply rem:text-[16px] font-normal text-white leading-[1.25]
+			&.material-symbols-outlined
+				@apply rem:text-[20px]
 		i
 			@apply flex-center rem:w-[24px] relative overflow-hidden h-8 bg-transparent text-Primary-1
 			&::before,&::after

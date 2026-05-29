@@ -91,9 +91,12 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			primary: ["Poppins", "sans-serif"],
+			primary: ["Google Sans Flex", "sans-serif"],
+			secondary: ["Phudu", "sans-serif"],
 			awesome: ['"Font Awesome 6 Pro"'],
 			awesomeSharp: ['"Font Awesome 6 Sharp"'],
+			ggFontAwesome: ['"GG Font Awesome"'],
+			materialSymbols: ['"Material Symbols Outlined"'],
 		},
 		fontSize: {
 			0: ["0", { lineHeight: "0" }],
@@ -492,7 +495,7 @@ module.exports = {
 			addBase({});
 			addComponents({
 				".heading-banner": {
-					fontWeight: "700",
+					fontWeight: "500",
 					fontSize: "calc(42/1920*100rem)", // 4xl
 					[`@media (min-width: ${theme("screens.md")})`]: {
 						fontSize: "calc(48/1920*100rem)", // 5xl
@@ -505,7 +508,7 @@ module.exports = {
 					},
 				},
 				".heading-1": {
-					fontWeight: "700",
+					fontWeight: "500",
 					lineHeight: "1.18",
 					fontSize: "calc(32/1920*100rem)", // 4xl
 					[`@media (min-width: ${theme("screens.md")})`]: {
@@ -516,7 +519,7 @@ module.exports = {
 					},
 				},
 				".heading-2": {
-					fontWeight: "700",
+					fontWeight: "500",
 					fontSize: "calc(32/1920*100rem)", // 4xl
 					[`@media (min-width: ${theme("screens.lg")})`]: {
 						fontSize: "calc(40/1920*100rem)", // 5xl
@@ -535,7 +538,8 @@ module.exports = {
 					},
 				},
 				".heading-60": {
-					fontWeight: "700",
+					fontWeight: "500",
+					lineHeight: "1.1",
 					fontSize: "calc(36/1920*100rem)", // 4xl
 					[`@media (min-width: ${theme("screens.md")})`]: {
 						fontSize: "calc(32/1920*100rem)", // 5xl
@@ -544,11 +548,24 @@ module.exports = {
 						fontSize: "calc(48/1920*100rem)", // 6xl
 					},
 					[`@media (min-width: ${theme("screens.xl")})`]: {
-						fontSize: "calc(60/1920*100rem)", // 64
+						fontSize: "calc(60/1920*100rem)", // 60
+					},
+				},
+				".heading-52": {
+					fontWeight: "500",
+					fontSize: "calc(36/1920*100rem)", // 4xl
+					[`@media (min-width: ${theme("screens.md")})`]: {
+						fontSize: "calc(32/1920*100rem)", // 5xl
+					},
+					[`@media (min-width: ${theme("screens.lg")})`]: {
+						fontSize: "calc(48/1920*100rem)", // 6xl
+					},
+					[`@media (min-width: ${theme("screens.xl")})`]: {
+						fontSize: "calc(52/1920*100rem)", // 
 					},
 				},
 				".heading-36": {
-					fontWeight: "700",
+					fontWeight: "500",
 					fontSize: "calc(24/1920*100rem)", // 4xl
 					[`@media (min-width: ${theme("screens.md")})`]: {
 						fontSize: "calc(28/1920*100rem)", // 5xl
@@ -560,8 +577,22 @@ module.exports = {
 						fontSize: "calc(36/1920*100rem)", // 64
 					},
 				},
+				".heading-32": {
+					fontWeight: "500",
+					fontSize: "calc(24/1920*100rem)", // 4xl
+					[`@media (min-width: ${theme("screens.md")})`]: {
+						fontSize: "calc(24/1920*100rem)", // 5xl
+					},
+					[`@media (min-width: ${theme("screens.lg")})`]: {
+						fontSize: "calc(28/1920*100rem)", // 6xl
+					},
+					[`@media (min-width: ${theme("screens.xl")})`]: {
+						fontSize: "calc(32/1920*100rem)", // 32
+					},
+				},
 				".heading-96": {
-					fontWeight: "700",
+					fontWeight: "500",
+					lineHeight: "1.1",
 					fontSize: "calc(36/1920*100rem)", // 4xl
 					[`@media (min-width: ${theme("screens.md")})`]: {
 						fontSize: "calc(64/1920*100rem)", // 5xl
@@ -570,7 +601,7 @@ module.exports = {
 						fontSize: "calc(72/1920*100rem)", // 6xl
 					},
 					[`@media (min-width: ${theme("screens.xl")})`]: {
-						fontSize: "calc(96/1920*100rem)", // 64
+						fontSize: "calc(96/1920*100rem)", // 96
 					},
 				},
 				".heading-5": {
@@ -591,10 +622,16 @@ module.exports = {
 					},
 				},
 				".body-1": {
-					"font-size": "calc(18/1920*100rem)",
+					"font-size": "calc(20/1920*100rem)",
+					lineHeight: 1.4,
 				},
 				".body-2": {
-					"font-size": "calc(20/1920*100rem)",
+					"font-size": "calc(18/1920*100rem)",
+					lineHeight: 1.4,
+				},
+				".body-3": {
+					"font-size": "calc(16/1920*100rem)",
+					lineHeight: 1.25,
 				},
 				".body-4": {
 					fontSize: setClamp(14),

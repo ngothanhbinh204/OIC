@@ -1,0 +1,54 @@
+section.section-homepage-4.home-page-4(class="section-py")
+	-
+		const serviceImages = [
+			"/img/1.jpg",
+			"/img/2.png",
+			"/img/3.png",
+			"/img/4.png",
+			"/img/banner_home.png",
+			"/img/banner_1.png",
+			"/img/1.jpg"
+		]
+		const serviceInfos = [
+			{ title: "CAU KIEN BE TONG", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis." },
+			{ title: "COC BE TONG LY TAM", desc: "Ket cau chiu luc vuot troi, dap ung da dang dieu kien dia chat va yeu cau tai trong cong trinh." },
+			{ title: "DAM SAN DU UNG LUC", desc: "Pham vi ung dung rong, gia tang hieu qua su dung vat lieu va toi uu tong muc dau tu." },
+			{ title: "CAU KIEN CAU DUONG", desc: "Giai phap dong bo cho du an giao thong, dam bao tien do va chat luong trong moi giai doan." },
+			{ title: "TUONG CHAN VA HO GA", desc: "Cau kien lap ghep nhanh, giam phu thuoc thoi tiet, giup day nhanh tien do thi cong hien truong." },
+			{ title: "UNG DUNG HA TANG XANH", desc: "Uu tien vat lieu than thien moi truong, ben vung theo thoi gian va hieu qua van hanh." },
+			{ title: "GIAI PHAP THEO YEU CAU", desc: "San xuat linh hoat theo quy cach du an, dam bao dong bo tu thiet ke den giao hang." }
+		]
+	.container
+		.heading-group(class="flex items-center justify-between gap-4 mb-6 lg:mb-8")
+			h2.block-title.heading-52 DICH VU CUA CHUNG TOI
+			+BtnPrimary({ text: "Xem tat ca", option: "style-default rounded" })
+
+		.main-layout(class="grid xl:grid-cols-[calc(867/1400*100%)_1fr] gap-4 xl:gap-2.5")
+			.group-left
+				.preview
+					.image-stack
+						each image, valIndex in serviceImages
+							.item-image(data-index=valIndex class=valIndex === 0 ? "is-current" : "")
+								a.img(href="#" class="img-ratio ratio:pt-[420_400]")
+									+PugImg(image)
+
+					.info-box
+						.counter
+							.current 01
+							.total /07
+						each val, valIndex in serviceInfos
+							.item-info(data-index=valIndex class=valIndex === 0 ? "is-current" : "")
+								h3.title= val.title
+								p.desc= val.desc
+
+						.controls
+							.btn.btn-sw-1.btn-prev(type="button")
+							.btn.btn-sw-1.btn-next(type="button")
+
+			.group-right
+				.swiper
+					.swiper-wrapper
+						each val in serviceImages
+							.swiper-slide
+								a.img(href="#" class="img-ratio ratio:pt-[420_330]")
+									+PugImg(val)

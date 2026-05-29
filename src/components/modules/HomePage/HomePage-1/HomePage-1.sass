@@ -1,0 +1,89 @@
+.home-page-1
+	@apply relative overflow-hidden
+
+	.swiper
+		@apply relative
+
+		.swiper-slide
+			@apply relative overflow-hidden
+	.media
+		@apply block img-ratio ratio:pt-[2000_1920] md:ratio:pt-[860_1920]
+		img
+			@apply w-full h-full object-cover
+
+	.overlay
+		@apply absolute-full z-2
+		opacity: 0.8
+		background: radial-gradient(438.38% 109.78% at 78.85% 56.61%, rgba(12, 78, 162, 0.00) 0%, #004BAB 78.98%)
+		mix-blend-mode: multiply
+
+	.content
+		@apply z-3
+
+	.inner
+		@apply rem:max-w-[560px] w-full
+		@apply rem:pb-[146px]
+		
+
+	.title
+		@apply text-Utility-white uppercase mb-6 heading-60
+
+	.desc
+		@apply text-white/90 font-normal mb-10 body-1
+		@apply -md:max-w-[80%]
+
+	.actions
+		@apply gap-3
+		.btn-base
+			&:hover
+				@apply gap-4
+	
+	.controls
+		@apply absolute inset-y-0 left-0 right-0 z-4 pointer-events-none
+		@apply hidden lg:flex items-center justify-between px-4 md:px-6 xl:px-8
+
+		.btn
+			@apply pointer-events-auto
+				
+		.btn-prev
+			@apply lg:ml-3
+		.btn-next
+			@apply lg:mr-3
+		.btn-prev
+			@apply xl:rem:mr-[-160px] translate-x-full #{!important}
+		.btn-next
+			@apply xl:rem:ml-[-160px] -translate-x-full #{!important}
+
+	.swiper-slide
+		.title,
+		.desc,
+		.actions
+			@apply opacity-0
+			transform: translate3d(0, 30px, 0)
+			transition: opacity .65s ease, transform .75s cubic-bezier(.22,.61,.36,1)
+		.desc
+			transition-delay: .08s
+
+		.actions
+			transition-delay: .16s
+
+	.swiper-slide.is-current
+		.title,
+		.desc,
+		.actions
+			@apply opacity-100
+			transform: translate3d(0, 0, 0)
+
+	@screen -lg
+		.content
+			@apply flex items-center
+
+		.inner
+			@apply pb-0
+
+		.controls
+			@apply px-3
+
+			.btn
+				&.btn-sw-1
+					@apply sq-10

@@ -1,0 +1,147 @@
+.home-page-4
+	@apply bg-Utility-gray-50
+
+	.heading-group
+		.block-title
+			@apply text-Utility-gray-950-maintext uppercase
+
+		.btn.btn-primary
+			&.style-default
+				@apply rem:h-[44px] rem:px-[24px] rounded-full border-Utility-gray-950-maintext
+				span
+					@apply rem:text-[15px]
+
+	.main-layout
+		@apply items-stretch
+
+	.group-left
+		@apply rounded-5 overflow-hidden
+		box-shadow: 0 16px 48px rgba(0, 0, 0, .06)
+
+		.preview
+			@apply relative h-full overflow-hidden rem:min-h-[580px]
+			@apply grid lg:grid-cols-[calc(390/810*100%)_1fr] gap-0
+			// min-height: clamp(calc(580/1920*100rem), calc(420/1920*100rem), calc(420/1920*100rem))
+
+
+			.image-stack
+				@apply relative h-full overflow-hidden
+
+				.item-image
+					@apply absolute-full
+					opacity: 0
+					transform: translateY(110%)
+					transition: transform .9s cubic-bezier(.22,.61,.36,1), opacity .55s ease
+					z-index: 1
+
+					&.is-prev
+						opacity: 0
+						transform: translateY(-14%)
+						z-index: 2
+
+					&.is-current
+						opacity: 1
+						transform: translateY(0)
+						z-index: 3
+
+					.img
+						@apply block absolute-full
+
+						img
+							@apply w-full h-full object-cover
+
+		.info-box
+			@apply relative pl-10
+
+			.counter
+				@apply mb-8 lg:mb-10
+
+			.current,
+			.total
+				@apply inline-block font-secondary text-Primary-1 rem:text-[18px] leading-none
+
+			.total
+				@apply opacity-70 ml-1
+
+			.item-info
+				@apply absolute left-6 right-6 lg:left-8 lg:right-8 xl:left-[2.0833333333rem] xl:right-[2.0833333333rem]
+				@apply top-[5.25rem]
+				opacity: 0
+				transform: translateY(22px)
+				filter: blur(4px)
+				pointer-events: none
+				transition: opacity .45s ease, transform .55s cubic-bezier(.22,.61,.36,1), filter .45s ease
+
+				&.is-current
+					opacity: 1
+					transform: translateY(0)
+					filter: blur(0)
+
+				.title
+					@apply heading-36 text-Utility-gray-950-maintext uppercase mb-2
+
+				.desc
+					@apply body-2 text-Utility-gray-800-text line-clamp-4
+
+			.controls
+				@apply absolute left-6 bottom-6 lg:left-8 lg:bottom-8 xl:left-[2.0833333333rem] xl:bottom-[2.0833333333rem]
+				@apply flex items-center gap-2
+
+				.btn.btn-sw-1
+					@apply sq-8 lg:sq-10
+
+	.group-right
+		@apply min-w-0 overflow-clip
+		@apply xl:rem:mr-[-256px] rem:min-h-[580px]
+		// margin-right: 0
+
+		// @screen md
+		// 	margin-right: -72px
+
+		// @screen lg
+		// 	margin-right: -128px
+
+		// @screen xl
+		// 	margin-right: -200px
+
+		// @media (min-width: 1680px)
+		// 	margin-right: -256px
+		// 	@apply rem:mr-[-256px]
+		.swiper-wrapper
+			@apply rem:min-h-[580px]
+
+		.swiper
+			@apply overflow-visible min-h-full
+
+			.swiper-slide
+				@apply h-auto lg:rem:max-w-[338px]
+				// opacity: .65
+				transition: opacity .35s ease
+
+				&.swiper-slide-active,
+				&.swiper-slide-next
+					opacity: 1
+
+				.img
+					@apply block rounded-5 overflow-hidden h-full
+
+					img
+						@apply w-full h-full object-cover
+						
+
+	@screen -lg
+		.group-left
+			.preview
+				@apply grid-cols-1
+
+			.info-box
+				@apply rem:min-h-[300px]
+
+				.item-info
+					@apply top-[4.75rem]
+
+		.group-right
+			margin-right: 0
+
+			.swiper
+				@apply overflow-hidden
